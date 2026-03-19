@@ -273,6 +273,10 @@ h3,
   background: linear-gradient(135deg, #0d7f70, #2ba892);
 }
 
+.appstore-link {
+  display: none;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
