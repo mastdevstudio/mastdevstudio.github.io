@@ -167,7 +167,7 @@ h3,
 .platform-groups {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .platform-group-title {
@@ -273,7 +273,18 @@ h3,
   background: linear-gradient(135deg, #0d7f70, #2ba892);
 }
 
-.appstore-link {
+.appstore-badge {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.appstore-badge img {
+  height: 46px;
+  width: auto;
+  display: block;
+}
+
+.appstore-link.pending {
   display: none;
 }
 
@@ -365,5 +376,23 @@ footer {
   .topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: min(1140px, 96%);
+  }
+
+  .platform-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 14px;
+  }
+
+  .appstore-badge img {
+    height: 42px;
   }
 }
