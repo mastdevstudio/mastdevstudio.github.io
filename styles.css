@@ -229,6 +229,15 @@ h3,
   text-justify: inter-word;
 }
 
+.screens-label {
+  margin: 0 0 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #2f5f80;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .app-screens {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
