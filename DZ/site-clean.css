@@ -1,0 +1,763 @@
+/* site-clean.css — v93 centralizovaná čistící vrstva
+   Účel: držet poslední konverzní/clean-up přepisy v jednom souboru místo duplicit v každé HTML stránce.
+*/
+
+/* v91 clean conversion pass – méně textu, čistší layout, jednotnější CTA */
+:root{
+  --clean-max-text: 820px;
+}
+
+.section-copy,
+.hero .lead,
+.result-disclaimer,
+.form-note{
+  max-width: var(--clean-max-text);
+}
+
+.dropdown-menu.compact .dropdown-link span{
+  display:none !important;
+}
+
+.dropdown-menu.compact .dropdown-link{
+  padding-block:14px !important;
+}
+
+.trust-strip-inner{
+  gap:14px !important;
+}
+
+.trust-strip-inner > div{
+  padding:12px 16px !important;
+  font-size:.94rem !important;
+}
+
+/* karty: méně textu, více klidu */
+.home-principle p,
+.home-area p,
+.calc-choice p,
+.problem-card p,
+.service-card p,
+.client-state-card p,
+.result-card p{
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.home-principle,
+.home-area,
+.calc-choice,
+.problem-card,
+.service-card{
+  padding:22px !important;
+}
+
+/* méně duplicitních mikrotextů v kalkulačkách */
+.calc-panel > p,
+.calculator-shell .section-copy,
+.pension-client-cta-grid.compact{
+  display:none !important;
+}
+
+/* úvodní sekce kalkulaček kompaktněji */
+.calc-intro-grid,
+.home-areas,
+.home-principles{
+  gap:16px !important;
+}
+
+.calc-intro-grid .calc-choice h3{
+  font-size:1.08rem !important;
+  line-height:1.18 !important;
+}
+
+.calc-intro-grid .calc-choice p{
+  font-size:.94rem !important;
+}
+
+/* formuláře: náhled dat nesmí dominovat stránce */
+.calculation-preview{
+  background:#fff !important;
+}
+
+.calculation-preview summary{
+  font-size:.94rem !important;
+}
+
+.calculation-preview pre,
+#mortgage-data-preview,
+#pension-data-preview,
+#calculationPreview{
+  max-height:320px !important;
+  font-size:.82rem !important;
+  line-height:1.5 !important;
+}
+
+/* jednotnější CTA – tlačítko výraznější než doprovodný text */
+.btn.primary,
+.btn.btn-primary,
+.btn-primary{
+  min-height:54px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.action-panel h3,
+.pension-client-cta h3{
+  font-size:clamp(2rem,3.6vw,3.8rem) !important;
+}
+
+.action-panel p,
+.pension-client-cta p{
+  max-width:900px;
+}
+
+/* důchodová kalkulačka: graf dominantnější, boční karty méně natažené */
+.three-state-cards{
+  align-items:start !important;
+}
+
+.three-state-cards .client-state-card:not(.portfolio-chart-card){
+  align-self:start !important;
+}
+
+.portfolio-chart-card{
+  min-height:auto !important;
+}
+
+.portfolio-chart-card .compact-portfolio-chart{
+  min-height:300px !important;
+}
+
+/* landing page audit – dlouhé čtení držet jako detail, ne zahlcení */
+.penzijni-audit .section-copy,
+.audit-page .section-copy{
+  max-width:760px;
+}
+
+/* mobil */
+@media(max-width:760px){
+  .trust-strip{
+    display:none !important;
+  }
+
+  .hero .lead{
+    font-size:1rem !important;
+  }
+
+  .section{
+    padding-block:46px !important;
+  }
+
+  .home-principle p,
+  .home-area p,
+  .calc-choice p{
+    -webkit-line-clamp:3;
+  }
+
+  .action-panel h3,
+  .pension-client-cta h3{
+    font-size:clamp(2.05rem,10vw,3.4rem) !important;
+  }
+}
+
+/* v92 visible clean cut – opravdu viditelné zjednodušení */
+.trust-strip{
+  display:none !important;
+}
+
+.section{
+  padding-block:64px !important;
+}
+
+.section.alt{
+  background:linear-gradient(180deg,#fffaf3 0%,#f8ecdf 100%) !important;
+}
+
+.hero-actions{
+  margin-top:28px !important;
+}
+
+.clean-compact-section{
+  padding-block:58px !important;
+}
+
+.clean-compact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin-top:26px;
+}
+
+.clean-compact-card{
+  border:1px solid var(--line, #ead7c5);
+  border-radius:24px;
+  background:#fff;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(36,16,42,.055);
+}
+
+.clean-compact-card small{
+  display:block;
+  color:#a00047;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-weight:950;
+  margin-bottom:10px;
+  font-size:.76rem;
+}
+
+.clean-compact-card h3{
+  margin:0 0 8px;
+  color:var(--ink, #27102f);
+  font-size:1.18rem;
+  line-height:1.2;
+}
+
+.clean-compact-card p{
+  margin:0;
+  color:var(--muted, #6f6773);
+  line-height:1.5;
+  font-weight:650;
+}
+
+.calc-intro-grid,
+#co-si-overite{
+  display:none !important;
+}
+
+.calculator-shell{
+  margin-top:0 !important;
+}
+
+.calc-panel h2{
+  margin-bottom:8px !important;
+}
+
+.calc-panel > p{
+  display:none !important;
+}
+
+.calc-purpose-fields > p.inline-note{
+  display:none !important;
+}
+
+.mortgage-purpose-note{
+  padding:12px 16px !important;
+  font-size:.95rem !important;
+}
+
+.pension-client-cta-wide,
+#pensionCta{
+  display:none !important;
+}
+
+.pension-inline-form-section{
+  margin-top:36px !important;
+}
+
+.pension-inline-form-head h3{
+  font-size:clamp(2rem,3.5vw,3.8rem) !important;
+}
+
+.data-package-note{
+  padding:14px 16px !important;
+}
+
+.data-package-note span:not(.tick){
+  display:none !important;
+}
+
+.action-panel,
+.pension-inline-form-section,
+.calc-panel,
+.result-panel,
+.simple-comparison,
+.light-panel{
+  box-shadow:0 14px 36px rgba(36,16,42,.06) !important;
+}
+
+/* méně nápovědného textu v kartách a formulářích */
+.helper,
+.inline-note,
+.form-note{
+  font-size:.9rem !important;
+  line-height:1.45 !important;
+}
+
+/* větší klid u hlavních karet */
+.home-area,
+.home-principle,
+.calc-choice,
+.client-state-card{
+  min-height:auto !important;
+}
+
+/* schovat dlouhé detailní popisy v menu */
+.dropdown-link span{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  .clean-compact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding-block:46px !important;
+  }
+}
+
+
+
+/* v97 content/design cleanup – sjednocený systém, tematická CTA zůstávají */
+:root{
+  --site-radius-lg:32px;
+  --site-radius-md:24px;
+  --site-section-y:clamp(54px,6vw,86px);
+  --site-text-max:820px;
+}
+
+/* konzistentní rytmus sekcí */
+.section,
+.panel.section,
+.calc-section,
+.result-section-light{
+  padding-block:var(--site-section-y);
+}
+
+.container,
+.shell{
+  width:min(100% - 40px, 1240px);
+  margin-inline:auto;
+}
+
+/* hero: stejné chování napříč stránkami, bez změny tématických obrázků */
+.hero h1,
+.page-hero h1,
+.refi-hero h1,
+.pension-hero h1,
+.mortgage-hub-hero h1{
+  max-width:1000px;
+  line-height:.96;
+  letter-spacing:-.055em;
+}
+
+.hero .lead,
+.hero p,
+.section-copy{
+  max-width:var(--site-text-max);
+}
+
+/* karty a panely */
+.calc-panel,
+.panel,
+.light-panel,
+.client-state-card,
+.home-area,
+.home-principle,
+.calc-choice,
+.contact-section form,
+.lead-block,
+.pension-inline-form-section{
+  border-radius:var(--site-radius-lg);
+}
+
+/* CTA systém: stejný vzhled, text zůstává podle tématu stránky */
+.btn,
+.btn.primary,
+.btn.btn-primary,
+.btn-primary{
+  border-radius:999px;
+  font-weight:900;
+  letter-spacing:-.01em;
+}
+
+.btn.primary,
+.btn.btn-primary,
+.btn-primary{
+  box-shadow:0 14px 30px rgba(177,0,77,.16);
+}
+
+.btn.primary:hover,
+.btn.btn-primary:hover,
+.btn-primary:hover{
+  transform:translateY(-1px);
+}
+
+/* formuláře: jednotnější mezery a klidnější náhled dat */
+.form-row{
+  gap:18px;
+}
+
+.form input,
+.form textarea,
+.form select,
+form input,
+form textarea,
+form select{
+  border-radius:18px;
+}
+
+.calculation-preview,
+details.calculation-preview{
+  margin-top:18px;
+}
+
+.calculation-preview pre,
+#mortgage-data-preview,
+#pension-data-preview,
+#calculationPreview{
+  max-height:260px !important;
+}
+
+/* kalkulačky: výsledek a formulář držet čitelně, ne přeplácaně */
+.recommendation-columns,
+.bank-options-grid,
+.contact-list,
+.pension-overview-grid{
+  gap:16px;
+}
+
+.mortgage-recommendation .recommendation-columns li,
+.contact-list .contact-point{
+  line-height:1.45;
+}
+
+/* důchodový graf a boční karty vyváženěji */
+.three-state-cards{
+  gap:18px;
+}
+
+.three-state-cards .client-state-card{
+  padding:26px;
+}
+
+.portfolio-chart-card .compact-portfolio-chart{
+  min-height:320px !important;
+}
+
+/* dlouhé metodické stránky: detail ano, ale s lepší čitelností */
+.audit-page .section-copy,
+.audit-page .hero .lead{
+  max-width:760px;
+}
+
+.audit-page details,
+.audit-page .faq details{
+  border-radius:20px;
+}
+
+/* menu: témata zůstávají, vizuálně čistěji */
+.main-nav a{
+  white-space:nowrap;
+}
+
+.dropdown-menu{
+  border-radius:22px;
+}
+
+/* mobil */
+@media(max-width:760px){
+  .container,
+  .shell{
+    width:min(100% - 28px, 1240px);
+  }
+
+  .section,
+  .panel.section,
+  .calc-section,
+  .result-section-light{
+    padding-block:44px;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .refi-hero h1,
+  .pension-hero h1,
+  .mortgage-hub-hero h1{
+    font-size:clamp(2.4rem,12vw,4.2rem);
+    line-height:.98;
+  }
+
+  .form-row{
+    grid-template-columns:1fr !important;
+  }
+
+  .portfolio-chart-card .compact-portfolio-chart{
+    min-height:230px !important;
+  }
+}
+
+
+/* v98 raspberry dark cards – náhrada černých proof bloků za malinovou */
+.home-proof-card.dark{
+  background:var(--rose) !important;
+  border-color:var(--rose) !important;
+  color:#fff !important;
+}
+
+.home-proof-card.dark h3{
+  color:#fff !important;
+}
+
+.home-proof-card.dark p{
+  color:#fff8ef !important;
+}
+
+
+
+/* v99 dark raspberry footer/statement blocks */
+.statement-dark-v99,
+.final-statement,
+.closing-statement,
+.home-final,
+.dark-statement,
+.statement-dark,
+.quote-band,
+.footer-band,
+.page-ending,
+.calculator-ending,
+.pension-ending,
+.mortgage-ending,
+.refi-ending,
+section[class*="statement"],
+section[class*="ending"]{
+  background:linear-gradient(135deg, #2a0f25 0%, #5a0d34 58%, #8f0042 100%) !important;
+  color:#fff8ef !important;
+  border-color:rgba(255,248,239,.16) !important;
+}
+
+.statement-dark-v99 h1,
+.statement-dark-v99 h2,
+.statement-dark-v99 h3,
+.final-statement h1,
+.final-statement h2,
+.final-statement h3,
+.closing-statement h1,
+.closing-statement h2,
+.closing-statement h3,
+.home-final h1,
+.home-final h2,
+.home-final h3,
+.dark-statement h1,
+.dark-statement h2,
+.dark-statement h3,
+.statement-dark h1,
+.statement-dark h2,
+.statement-dark h3,
+.quote-band h1,
+.quote-band h2,
+.quote-band h3,
+.footer-band h1,
+.footer-band h2,
+.footer-band h3,
+.page-ending h1,
+.page-ending h2,
+.page-ending h3,
+.calculator-ending h1,
+.calculator-ending h2,
+.calculator-ending h3,
+.pension-ending h1,
+.pension-ending h2,
+.pension-ending h3,
+.mortgage-ending h1,
+.mortgage-ending h2,
+.mortgage-ending h3,
+.refi-ending h1,
+.refi-ending h2,
+.refi-ending h3,
+section[class*="statement"] h1,
+section[class*="statement"] h2,
+section[class*="statement"] h3,
+section[class*="ending"] h1,
+section[class*="ending"] h2,
+section[class*="ending"] h3{
+  color:#fff8ef !important;
+}
+
+.statement-dark-v99 p,
+.final-statement p,
+.closing-statement p,
+.home-final p,
+.dark-statement p,
+.statement-dark p,
+.quote-band p,
+.footer-band p,
+.page-ending p,
+.calculator-ending p,
+.pension-ending p,
+.mortgage-ending p,
+.refi-ending p,
+section[class*="statement"] p,
+section[class*="ending"] p{
+  color:rgba(255,248,239,.86) !important;
+}
+
+/* v99: tmavé proof karty drží malinový brand, ne černou */
+.home-proof-card.dark{
+  background:linear-gradient(135deg, #b1004d 0%, #8f0042 100%) !important;
+  border-color:#b1004d !important;
+  color:#fff !important;
+}
+
+.home-proof-card.dark h3{
+  color:#fff !important;
+}
+
+.home-proof-card.dark p{
+  color:#fff8ef !important;
+}
+
+
+
+/* v100 unified dark-raspberry footer style */
+.footer{
+  background:linear-gradient(135deg, #2a0f25 0%, #5a0d34 58%, #8f0042 100%) !important;
+  color:#fff8ef !important;
+  border-color:rgba(255,248,239,.16) !important;
+}
+
+.footer h1,
+.footer h2,
+.footer h3{
+  color:#fff8ef !important;
+}
+
+.footer p{
+  color:rgba(255,248,239,.86) !important;
+}
+
+.footer a{
+  color:#fff8ef !important;
+}
+
+
+
+/* v101 refinancing footer full width */
+.refi-page > .footer{
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  border-radius:0 !important;
+}
+
+.footer{
+  width:100%;
+  box-sizing:border-box;
+}
+
+
+
+/* v102 refinancing consent alignment */
+.refi-page .consent.consent-inline{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:14px !important;
+  width:100% !important;
+  max-width:100% !important;
+  margin:20px 0 18px !important;
+  padding:0 !important;
+  text-align:left !important;
+}
+
+.refi-page .consent.consent-inline input[type="checkbox"]{
+  flex:0 0 auto !important;
+  width:22px !important;
+  height:22px !important;
+  margin:0 !important;
+  transform:none !important;
+}
+
+.refi-page .consent.consent-inline span{
+  flex:1 1 auto !important;
+  display:block !important;
+  max-width:none !important;
+  margin:0 !important;
+  color:var(--muted, #6f6773) !important;
+  font-weight:800 !important;
+  line-height:1.45 !important;
+  text-align:left !important;
+}
+
+.refi-page .consent.consent-inline a{
+  color:var(--rose, #b1004d) !important;
+  font-weight:950 !important;
+  text-decoration:underline !important;
+  text-underline-offset:3px !important;
+}
+
+@media(max-width:640px){
+  .refi-page .consent.consent-inline{
+    align-items:flex-start !important;
+    gap:12px !important;
+  }
+
+  .refi-page .consent.consent-inline input[type="checkbox"]{
+    margin-top:3px !important;
+  }
+}
+
+
+
+/* v103 GDPR return + refinancing consent aligned like mortgage form */
+.refi-page .calculation-preview{
+  margin-bottom:20px !important;
+}
+
+.refi-page .contact-section .consent.consent-inline{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:14px !important;
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 0 24px !important;
+  padding:0 4px !important;
+  text-align:left !important;
+}
+
+.refi-page .contact-section .consent.consent-inline input[type="checkbox"]{
+  flex:0 0 22px !important;
+  width:22px !important;
+  height:22px !important;
+  min-width:22px !important;
+  min-height:22px !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.refi-page .contact-section .consent.consent-inline span{
+  flex:1 1 auto !important;
+  display:inline !important;
+  max-width:none !important;
+  margin:0 !important;
+  color:var(--muted, #6f6773) !important;
+  font-weight:800 !important;
+  line-height:1.45 !important;
+  text-align:left !important;
+}
+
+.refi-page .contact-section .consent.consent-inline a{
+  color:var(--rose-dark, #8f0042) !important;
+  font-weight:950 !important;
+  text-decoration:underline !important;
+  text-underline-offset:3px !important;
+}
+
+@media(max-width:640px){
+  .refi-page .contact-section .consent.consent-inline{
+    align-items:flex-start !important;
+    gap:12px !important;
+    margin-bottom:22px !important;
+  }
+
+  .refi-page .contact-section .consent.consent-inline input[type="checkbox"]{
+    margin-top:2px !important;
+  }
+}

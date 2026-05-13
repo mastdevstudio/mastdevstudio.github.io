@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fff8ef">
+  <meta name="msapplication-TileColor" content="#fff8ef">
+  <meta name="msapplication-config" content="browserconfig.xml">
+<title>Důchodová kalkulačka | David Žára</title>
+  <link rel="stylesheet" href="penze-v13-styles.css" />
+  <link rel="stylesheet" href="page-duchodova-kalkulacka.css">
+
+<link rel="stylesheet" href="site-clean.css">
+<link rel="stylesheet" href="site-fixed-header.css">
+
+</head>
+<body class="duchodova-kalkulacka pension-calculator-page">
+<header class="header">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Značka a poradce">
+        <a class="brand-4fin" href="https://www.4fin.cz/pro-klienty" target="_blank" rel="noopener noreferrer" aria-label="4fin Better together – otevřít web 4fin">
+          <img class="brand-logo" src="logo.png" alt="4fin Better together" decoding="async">
+        </a>
+        <div class="brand-line" aria-hidden="true"></div>
+        <a class="brand-home" href="index.html" aria-label="David Žára – hlavní stránka">
+          <div class="brand-name"><strong>David Žára</strong><span>Senior finanční konzultant</span></div>
+        </a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span>Menu</span>
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav main-nav" id="main-nav" aria-label="Hlavní navigace">
+        <a class="nav-link" href="index.html">Hlavní stránka</a>
+
+        <div class="nav-item has-dropdown">
+          <button class="nav-link nav-trigger" type="button" aria-expanded="false">
+            S čím pomohu <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="hypoteky.html">
+              <strong>Hypotéky</strong>
+              <span>Možnosti, banky, příprava a bezpečná splátka</span>
+            </a>
+            <a class="dropdown-link" href="refinancovani-hypoteky.html">
+              <strong>Refinancování hypotéky</strong>
+              <span>Ověřit, jestli změna banky nebo fixace dává finanční smysl</span>
+            </a>
+            <a class="dropdown-link" href="hypotecni-kalkulacka.html">
+              <strong>Hypoteční kalkulačka</strong>
+              <span>Orientačně spočítat splátku a zatížení rozpočtu</span>
+            </a>
+            <a class="dropdown-link" href="zivotni-pojisteni.html">
+              <strong>Životní pojištění</strong>
+              <span>Ochrana příjmu, invalidita, nemoc a úraz</span>
+            </a>
+            <a class="dropdown-link" href="pojisteni-majetku.html">
+              <strong>Pojištění majetku</strong>
+              <span>Dům, byt, domácnost a kontrola podpojištění</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <button class="nav-link nav-trigger active" type="button" aria-expanded="false">
+            Penze <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu compact">
+            <a class="dropdown-link" href="penzijni-audit.html">
+              <strong>Penzijní audit</strong>
+              <span>Kontrola evidovaných dob u ČSSZ</span>
+            </a>
+            <a class="dropdown-link active" href="duchodova-kalkulacka.html">
+              <strong>Důchodová kalkulačka</strong>
+              <span>Orientační výpočet penzijní mezery</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+<section class="hero pension-hero">
+  <div class="hero-media duchod-hero-media" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>
+        <span>Na penzi se nečeká.</span>
+        <span class="accent">Na penzi se připravuje.</span>
+      </h1>
+
+      <p class="headline-addon">Stát vám jednou řekne, kolik dostanete.</p>
+
+      <p class="lead">
+        Vy byste ale měli vědět, jak velký rozdíl vám podle výpočtu vychází.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#kalkulacka">Spočítat plán na penzi <span class="arrow">›</span></a>
+      </div>
+
+      <div class="trust-line">
+        <span class="tick">✓</span>
+        <div>Výpočet je orientační. Smysl začne dávat až ve spojení s vaším příjmem, rozpočtem, rezervou a cílem.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kalkulacka" class="section calc-section">
+      <div class="shell calc-layout">
+
+        <form id="pensionForm" class="calc-card">
+          <div class="pension-form-guide">
+            <strong>Vyplňte údaje postupně shora dolů.</strong>
+            <span>Všechna pole jsou viditelná, aby bylo jasné, z čeho se výsledek počítá. Cílový rozpočet v penzi se dopočítá automaticky z nákladů.</span>
+          </div>
+          <div class="form-head">
+            <div>
+              <p class="label">Základní údaje</p>
+              <h3>Plán na penzi</h3>
+            </div>
+            <span class="badge">orientační model</span>
+          </div>
+
+          <div class="grid two">
+            <label>Věk <input id="age" value="38" inputmode="numeric"></label>
+            <label>Plánovaný odchod do penze <input id="retAge" value="67" inputmode="numeric"></label>
+            <label>Dnešní čistý měsíční příjem <input id="netIncome" value="42000" inputmode="numeric"></label>
+            <label class="target-income-field">
+              Cílový měsíční rozpočet v penzi
+              <input id="targetIncome" value="32000" inputmode="numeric" readonly aria-readonly="true">
+              <small>Částka se dopočítá automaticky z nákladů níže. Do pole se ručně nepíše.</small>
+            </label>
+          </div>
+
+          <div class="eportal-box">
+            <a class="eportal-logo-wrap" href="https://eportal.cssz.cz/web/portal" target="_blank" rel="noreferrer" aria-label="Otevřít ePortál ČSSZ">
+              <img src="penze-v13-eportal-cssz.png" alt="ePortál ČSSZ online služby" / decoding="async" loading="lazy">
+            </a>
+            <div class="eportal-text">
+              <label>Očekávaný starobní důchod
+                <input id="statePension" value="0" inputmode="numeric">
+              </label>
+              <p>
+                Údaj najdete v <strong>Informativní důchodové aplikaci</strong> na ePortálu ČSSZ.
+                Kliknutím na logo otevřete ePortál v novém okně. Pokud údaj nevyplníte, výsledek bude označený jen jako hrubý odhad podle dnešního příjmu.
+              </p>
+            </div>
+          </div>
+
+          
+          <section class="pension-visible-section">
+            <h4>Náklady a příjmy v penzi</h4>
+<p class="auto-target-info">Cílový měsíční rozpočet v penzi se počítá automaticky jako součet nákladů v této části. Pokud chcete výsledek změnit, upravte jednotlivé nákladové položky.</p>
+<div class="grid two detail-grid">
+              <label>Bydlení měsíčně <input id="housingCosts" value="9000" inputmode="numeric"></label>
+              <label>Běžné měsíční náklady <input id="livingCosts" value="14500" inputmode="numeric"></label>
+              <label>Zdraví a rezerva <input id="healthCosts" value="3500" inputmode="numeric"></label>
+              <label>Volný čas / cestování <input id="leisureCosts" value="5000" inputmode="numeric"></label>
+              <label class="wide-field">Očekávaný pravidelný příjem v penzi
+                <input id="regularIncome" value="0" inputmode="numeric">
+                <small>Například nájem, částečná práce nebo jiný stabilní příjem. Nejde o jednorázové úspory.</small>
+              </label>
+            </div>
+          </section>
+
+          
+          <section class="pension-visible-section">
+            <h4>Současné penzijní spoření</h4>
+            <div class="grid two detail-grid">
+              <label>Kolik už máte určeno na penzi <input id="currentSavings" value="180000" inputmode="numeric"></label>
+              <label>Kolik si měsíčně odkládáte <input id="monthlySaving" value="2500" inputmode="numeric"></label>
+              <label>Příspěvek zaměstnavatele měsíčně <input id="employer" value="0" inputmode="numeric"></label>
+              </div>
+          </section>
+
+          
+          <section class="pension-visible-section advanced">
+            <h4>Modelové předpoklady</h4>
+            <div class="scenario-box">
+              <p class="scenario-title">Model zhodnocení</p>
+              <div class="scenario-options">
+                <label class="scenario-choice">
+                  <input type="radio" name="scenario" value="careful">
+                  <span>Konzervativně <small>1 % p.a. reálně</small></span>
+                </label>
+                <label class="scenario-choice">
+                  <input type="radio" name="scenario" value="middle" checked>
+                  <span>Vyváženě <small>2,5 % p.a. reálně</small></span>
+                </label>
+                <label class="scenario-choice">
+                  <input type="radio" name="scenario" value="dynamic">
+                  <span>Dynamicky <small>4 % p.a. reálně</small></span>
+                </label>
+              </div>
+              <p class="scenario-note">Výpočet pracuje v dnešních cenách. Zhodnocení je modelový reálný výnos po zohlednění inflace, nikoliv garance. Pro fázi čerpání se používá konzervativně poloviční výnos oproti fázi spoření.</p>
+            </div>
+            <div class="grid two detail-grid">
+              <label>Do kolika let peníze rozpočítat <input id="drawAge" value="90" inputmode="numeric"></label>
+              <input id="returnRate" value="2.5" type="hidden">
+              <input id="drawReturnRate" value="1.25" type="hidden">
+            </div>
+          </section>
+
+          <button class="btn btn-primary calc-submit" type="submit">Spočítat a zobrazit výsledek</button>
+        </form>
+      </div>
+    </section>
+
+<section id="vysledek" class="section result-section-light">
+      <div class="shell">
+        <div class="result-heading-light pension-overview-heading">
+          <p class="label">Výsledek</p>
+          <h2>Váš orientační důchodový výhled</h2>
+          <p>Ukazuje rozdíl mezi cílem, současným nastavením a jedním modelovým scénářem.</p>
+        </div>
+
+        <div class="result-dashboard-light">
+          <section class="pension-main-gap-card">
+            <div id="pensionDataAlert" class="pension-data-alert">
+              <strong>Chybí údaj z ČSSZ / IDA.</strong>
+              <span>Výsledek níže je zatím jen hrubý orientační odhad. Pro přesnější výpočet doplňte očekávaný starobní důchod z ePortálu ČSSZ.</span>
+            </div>
+            <div>
+              <span class="verdict-kicker">K vašemu cíli zatím chybí</span>
+              <strong id="verdictGap">4 102 Kč / měsíc</strong>
+              <p>Tolik může podle modelu chybět k požadovanému měsíčnímu příjmu.</p>
+              <small>Počítáme se státním důchodem, úsporami a zadanými údaji.</small>
+            </div>
+          </section>
+
+          <div class="pension-overview-grid">
+            <article class="pension-overview-card">
+              <span class="verdict-kicker">Váš cíl</span>
+              <p>Měsíční částka, kterou chcete mít v důchodu k dispozici.</p>
+              <strong id="overviewTargetIncome">32 000 Kč / měsíc</strong>
+              <small>Ukazuje, kam se chcete dostat.</small>
+            </article>
+
+            <article class="pension-overview-card">
+              <span class="verdict-kicker">Současný výhled</span>
+              <p>Odhad podle současného nastavení, započteného státního důchodu a stávajících úspor.</p>
+              <strong id="overviewCurrentIncome">27 898 Kč / měsíc</strong>
+              <small>Ukazuje, kde jste dnes.</small>
+            </article>
+
+            <article class="pension-overview-card model">
+              <span class="verdict-kicker">Modelová varianta</span>
+              <p>Při zadaných předpokladech by tato pravidelná částka mohla pomoci rozdíl snížit.</p>
+              <strong id="verdictRecommendedSaving">3 904 Kč / měsíc</strong>
+              <small>Nejde o garanci, ale o modelový scénář.</small>
+            </article>
+          </div>
+
+          <p class="pension-overview-disclaimer">Výpočet je orientační. Skutečný vývoj závisí na čase, inflaci, výnosech, poplatcích a konkrétním nastavení. Nejde o garanci výsledku ani individuální investiční doporučení.</p>
+
+          <section class="pension-human-summary" id="pensionHumanSummary">
+            <span>Co z toho plyne jednoduše</span>
+            <p id="pensionHumanSummaryText">Podle zadaných údajů vychází orientační rozdíl, který má smysl zpřesnit údajem z ČSSZ / IDA a projít podle vašeho reálného rozpočtu.</p>
+          </section>
+
+          <section class="simple-comparison pension-three-comparison">
+            <div class="simple-head">
+              <h3>Dnes vs. modelová varianta</h3>
+              <p>Srovnání ukazuje rozdíl mezi současným nastavením, vývojem portfolia a jedním modelovým scénářem.</p>
+            </div>
+
+            <div class="three-state-cards">
+              <article class="client-state-card">
+                <div class="state-title">
+                  <span>Stávající stav</span>
+                  <strong>Dnes</strong>
+                </div>
+                <ul>
+                  <li><span>Měsíčně odkládáte</span><b id="baCurrentSaving">2 500 Kč</b></li>
+                  <li><span>Renta z úspor v penzi</span><b id="baCurrentDraw">4 107 Kč</b></li>
+                  <li class="bad"><span>Orientační rozdíl</span><b id="baCurrentGap">5 293 Kč</b></li>
+                  <li><span>Odhad úspor v době penze</span><b id="baCurrentCapital">765 084 Kč</b></li>
+                </ul>
+              </article>
+
+              <article class="client-state-card portfolio-chart-card portfolio-chart-heading-top">
+                <div class="portfolio-chart-heading">
+                  <span>Vývoj portfolia</span>
+                  <strong>Jak se mohou vyvíjet úspory</strong>
+                </div>
+                <svg class="chart light-chart compact-portfolio-chart" viewBox="0 0 760 300" aria-label="Vývoj hodnoty penzijních úspor">
+                  <g class="gridlines-light">
+                    <line x1="60" y1="45" x2="700" y2="45"></line>
+                    <line x1="60" y1="100" x2="700" y2="100"></line>
+                    <line x1="60" y1="155" x2="700" y2="155"></line>
+                    <line x1="60" y1="210" x2="700" y2="210"></line>
+                  </g>
+                  <polyline id="portfolioLineCurrent" class="portfolio-line-light current" points="60,235 170,215 280,183 390,145 500,100 610,60 700,33"></polyline>
+                  <polyline id="portfolioLineRecommended" class="portfolio-line-light recommended" points="60,235 170,210 280,165 390,115 500,70 610,35 700,20"></polyline>
+                  <text x="60" y="275" id="chartStartAge">38 let</text>
+                  <text x="640" y="275" id="chartEndAge">67 let</text>
+                  <text id="chartCurrentEndLabel" class="curve-label-light current-label" x="508" y="88">Dnes: 765 084 Kč</text>
+                  <text id="chartRecommendedEndLabel" class="curve-label-light recommended-label" x="470" y="30">Model: 1 751 165 Kč</text>
+                </svg>
+                <div class="chart-legend-mini">
+                  <span><i class="legend-current"></i>Dnes</span>
+                  <span><i class="legend-model"></i>Modelová varianta</span>
+                </div>
+                <p class="portfolio-chart-note">Jednoduchý pohled na to, jak se může lišit současné nastavení a modelová varianta do důchodu.</p>
+              </article>
+
+              <article class="client-state-card model">
+                <div class="state-title">
+                  <span>Model podle cíle</span>
+                  <strong>Modelová varianta</strong>
+                </div>
+                <ul>
+                  <li><span>Měsíčně odkládáte</span><b id="baRecommendedSaving">4 587 Kč</b></li>
+                  <li><span>Renta z úspor v penzi</span><b id="baRecommendedDraw">9 400 Kč</b></li>
+                  <li class="good"><span>Orientační rozdíl</span><b id="baRecommendedGap">Modelově sníženo</b></li>
+                  <li><span>Odhad úspor v době penze</span><b id="baRecommendedCapital">1 751 165 Kč</b></li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="impact-sentence" id="impactSentence">
+              Modelové navýšení o 2 087 Kč měsíčně by podle výpočtu mohlo snížit orientační rozdíl o 5 293 Kč měsíčně.
+            </div>
+          </section>
+<section id="duchod-formular" class="pension-inline-form-section">
+            <div class="pension-inline-form-head">
+              <span class="cta-pill">Ověření výsledku</span>
+              <h3>Chcete výsledek zkontrolovat?</h3>
+              <p>Pošlete mi výsledek. Údaje z kalkulačky se přiloží automaticky.</p>
+            </div>
+
+            <div class="data-package-note pension-data-package-note">
+              <span class="tick">✓</span>
+              <div>
+                <strong>Výsledek se přiloží ke zprávě.</strong>
+                <span>Díky tomu rychleji zjistím, jestli výsledek stojí na přesných údajích.</span>
+              </div>
+            </div>
+
+            <form class="form pension-lead-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="b73262e9-1e6e-4062-b94e-d2e6530dd519">
+              <input type="hidden" name="subject" value="Žádost o kontrolu důchodové kalkulačky">
+              <input type="hidden" name="from_name" value="davidzara.cz">
+              <input type="hidden" name="redirect" value="https://davidzara.cz/dekuji.html">
+              <input type="hidden" name="vysledek_kalkulacky" id="pension-lead-result">
+              <textarea name="kompletni_balicek_dat_z_duchodove_kalkulacky" id="pension-full-data" hidden></textarea>
+              <textarea name="duchodova_kalkulacka_json" id="pension-json-data" hidden></textarea>
+              <input type="checkbox" name="botcheck" style="display:none">
+
+              <div class="form-row">
+                <label>Jméno a příjmení
+                  <input name="jmeno" type="text" required placeholder="Jan Novák" autocomplete="name">
+                </label>
+                <label>Telefon
+                  <input name="telefon" type="tel" required placeholder="+420 777 000 000" autocomplete="tel">
+                </label>
+              </div>
+
+              <label>E-mail
+                <input name="email" type="email" placeholder="jan@email.cz" autocomplete="email">
+              </label>
+
+              <label>Zpráva
+                <textarea name="zprava" placeholder="Napište stručně, co chcete ověřit. Například: nevím, jestli mám správně údaj z ČSSZ / IDA, nebo chci zkontrolovat penzijní rozdíl."></textarea>
+              </label>
+
+              <details class="calculation-preview">
+                <summary>Zobrazit balíček dat, který se odešle</summary>
+                <pre id="pension-data-preview">Zatím bez výpočtu.</pre>
+              </details>
+
+              <label class="consent">
+                <input type="checkbox" name="souhlas" required>
+                <span>Souhlasím se zpracováním osobních údajů za účelem kontaktování. Více v <a href="zasady-zpracovani-osobnich-udaju.html">zásadách ochrany osobních údajů</a>.</span>
+              </label>
+
+              <button class="btn btn-primary full" type="submit">Chci zkontrolovat svůj penzijní výhled</button>
+              <div class="form-note">Nejde o závazek ke sjednání produktu. Nejdřív ověříme vstupy, ČSSZ údaj a praktický další krok.</div>
+            </form>
+          </section>
+</div>
+      </div>
+    </section>
+
+<footer class="footer">
+  <h2>Penze nemá být náhoda.<br>Má mít plán.</h2>
+  <p>Výpočet ukáže první čísla. Smysl začnou dávat až ve chvíli, kdy je zasadíme do vašeho rozpočtu, rezervy a dlouhodobých cílů.</p>
+</footer>
+
+<script src="penze-v13-script.js"></script>
+
+<script src="site-nav.js"></script>
+</body>
+</html>

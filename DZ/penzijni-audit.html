@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fff8ef">
+  <meta name="msapplication-TileColor" content="#fff8ef">
+  <meta name="msapplication-config" content="browserconfig.xml">
+<title>Jak zkontrolovat evidované doby důchodového pojištění | Praktický návod</title>
+  <meta name="description" content="Zjistěte, jak si zkontrolovat přehled dob důchodového pojištění u ČSSZ, co ověřit, jak poznat chybějící dobu a jak doložit opravu. Praktický návod krok za krokem.">
+  <link rel="canonical" href="https://davidzara.cz/penzijni-audit.html">
+  <link rel="preload" as="image" href="logo.png" type="image/png">
+  <link rel="preload" as="image" href="hero-penzijni-audit.jpg" type="image/png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jak zkontrolovat evidované doby důchodového pojištění | Praktický návod">
+  <meta property="og:description" content="Praktický průvodce kontrolou evidovaných dob důchodového pojištění u ČSSZ.">
+  <meta property="og:image" content="https://davidzara.cz/hero-penzijni-audit.jpg">
+  <meta property="og:url" content="https://davidzara.cz/penzijni-audit.html">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="stylesheet" href="page-penzijni-audit.css">
+
+<link rel="stylesheet" href="site-clean.css">
+<link rel="stylesheet" href="site-fixed-header.css">
+
+</head>
+<body class="audit-page">
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Značka a poradce">
+        <a class="brand-4fin" href="https://www.4fin.cz/pro-klienty" target="_blank" rel="noopener noreferrer" aria-label="4fin Better together – otevřít web 4fin">
+          <img class="brand-logo" src="logo.png" alt="4fin Better together" decoding="async">
+        </a>
+        <div class="brand-line" aria-hidden="true"></div>
+        <a class="brand-home" href="index.html" aria-label="David Žára – hlavní stránka">
+          <div class="brand-name"><strong>David Žára</strong><span>Senior finanční konzultant</span></div>
+        </a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span>Menu</span>
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav main-nav" id="main-nav" aria-label="Hlavní navigace">
+        <a class="nav-link" href="index.html">Hlavní stránka</a>
+
+        <div class="nav-item has-dropdown">
+          <button class="nav-link nav-trigger" type="button" aria-expanded="false">
+            S čím pomohu <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="hypoteky.html">
+              <strong>Hypotéky</strong>
+              <span>Možnosti, banky, příprava a bezpečná splátka</span>
+            </a>
+            <a class="dropdown-link" href="refinancovani-hypoteky.html">
+              <strong>Refinancování hypotéky</strong>
+              <span>Ověřit, jestli změna banky nebo fixace dává finanční smysl</span>
+            </a>
+            <a class="dropdown-link" href="hypotecni-kalkulacka.html">
+              <strong>Hypoteční kalkulačka</strong>
+              <span>Orientačně spočítat splátku a zatížení rozpočtu</span>
+            </a>
+            <a class="dropdown-link" href="zivotni-pojisteni.html">
+              <strong>Životní pojištění</strong>
+              <span>Ochrana příjmu, invalidita, nemoc a úraz</span>
+            </a>
+            <a class="dropdown-link" href="pojisteni-majetku.html">
+              <strong>Pojištění majetku</strong>
+              <span>Dům, byt, domácnost a kontrola podpojištění</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <button class="nav-link nav-trigger active" type="button" aria-expanded="false">
+            Penze <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu compact">
+            <a class="dropdown-link active" href="penzijni-audit.html">
+              <strong>Penzijní audit</strong>
+              <span>Kontrola evidovaných dob u ČSSZ</span>
+            </a>
+            <a class="dropdown-link" href="duchodova-kalkulacka.html">
+              <strong>Důchodová kalkulačka</strong>
+              <span>Orientační výpočet penzijní mezery</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>
+            <span>Než začnete plánovat penzi,</span>
+            <span class="accent">ověřte si, z čeho se vám bude důchod počítat.</span>
+          </h1>
+
+          <p class="lead">
+            Česká správa sociálního zabezpečení by měla evidovat všechny vaše doby pojištění, zaměstnání, podnikání i náhradní doby. Pokud některé údaje chybí, může to ovlivnit výši budoucího důchodu.
+          </p>
+          <p class="lead lead-tight">
+            Níže najdete postup, jak si údaje jednoduše zkontrolovat.
+          </p>
+<div class="hero-actions">
+            <a class="btn primary" href="#postup">Chci postup krok za krokem <span class="arrow">›</span></a>
+</div>
+
+          <div class="trust-line"><span class="tick">✓</span><div>Neevidovaná doba nemusí být automaticky chyba. Konečné posouzení dob a jejich započtení vždy provádí ČSSZ.</div></div>
+</div>
+        </div>
+      </div>
+    </section>
+    <section class="trust-strip" aria-label="Co si ověříte">
+      <div class="container trust-strip-inner">
+        <div><span class="tick">✓</span> Doby důchodového pojištění</div>
+        <div><span class="tick">✓</span> Zaměstnání, OSVČ a náhradní doby</div>
+        <div><span class="tick">✓</span> Příjmy od roku 1986</div>
+        <div><span class="tick">✓</span> Jak řešit nesrovnalosti</div>
+      </div>
+    </section>
+
+    <section class="section audit-anchor" id="postup">
+      <div class="container">
+        <h2>Jak na kontrolu v 5 krocích</h2>
+        <p class="section-copy">Nejdřív získáte přehled, potom si uděláte vlastní časovou osu a nakonec označíte, co je potřeba ověřit.</p>
+
+        <div class="audit-process">
+          <article class="audit-step"><div class="audit-step-num">1</div><h3>Získejte přehled</h3><p>Přihlaste se do ePortálu ČSSZ a otevřete službu Moje konto nebo přehled dob důchodového pojištění.</p></article>
+          <article class="audit-step"><div class="audit-step-num">2</div><h3>Stáhněte si výpis</h3><p>Uložte si PDF nebo si údaje vytiskněte.</p></article>
+          <article class="audit-step"><div class="audit-step-num">3</div><h3>Sepište časovou osu</h3><p>Napište si období školy, zaměstnání, OSVČ, Úřadu práce, péče, vojny, zahraničí a mezer.</p></article>
+          <article class="audit-step"><div class="audit-step-num">4</div><h3>Porovnejte s realitou</h3><p>Označte, co sedí, co chybí a co si nejste jistí.</p></article>
+          <article class="audit-step"><div class="audit-step-num">5</div><h3>Doložte nesrovnalosti</h3><p>Dohledejte doklady a pošlete návrh na doplnění nebo opravu přes ePortál ČSSZ nebo OSSZ.</p></article>
+        </div>
+
+        <div class="audit-badge-row" aria-label="Legenda">
+          <span class="audit-badge green">zelená = sedí</span>
+          <span class="audit-badge orange">oranžová = ověřit</span>
+          <span class="audit-badge red">červená = řešit</span>
+          <span class="audit-badge blue">modrá = informace</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt audit-anchor" id="proc">
+      <div class="container">
+        <h2>Proč to řešit včas?</h2>
+        <p class="section-copy">Kontrola evidence není strašení. Je to praktická prevence, aby se případné chyby neřešily až ve chvíli, kdy žádáte o důchod.</p>
+        <div class="cards-4">
+          <article class="info-card"><h3>Může chybět část kariéry</h3><p>V evidenci nemusí být kompletní zaměstnání, OSVČ, náhradní doby nebo příjmy.</p></article>
+          <article class="info-card"><h3>Staré doklady se hledají těžko</h3><p>Zaměstnavatel už nemusí existovat a po letech se doklady dohledávají obtížněji.</p></article>
+          <article class="info-card"><h3>Doby ovlivňují nárok na důchod</h3><p>Pro nárok na důchod je důležité, kolik let pojištění člověk získal.</p></article>
+          <article class="info-card"><h3>Příjmy ovlivňují výši důchodu</h3><p>Od roku 1986 se kontrolují také roční vyměřovací základy, tedy zjednodušeně příjmy, ze kterých se odvádělo pojistné.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audit-anchor" id="kde">
+      <div class="container">
+        <h2>Kde najdu své evidované doby?</h2>
+        <p class="section-copy">Nejrychlejší cesta je elektronicky. K dispozici ale existuje více variant podle toho, co přesně potřebujete.</p>
+        <div class="audit-options">
+          <article class="audit-option">
+            <h3>Možnost A: Moje konto na ePortálu ČSSZ</h3>
+            <p>Nejrychlejší varianta. Přihlásíte se přes Identitu občana nebo datovou schránku a zobrazíte si přehled dob evidovaných u ČSSZ. Přes tuto službu lze obvykle také navrhnout doplnění nebo úpravu údajů a přiložit doklady.</p>
+            <a class="btn primary" href="https://eportal.cssz.cz/web/portal/-/sluzby/moje-konto" target="_blank" rel="noopener noreferrer">Otevřít ePortál ČSSZ <span class="arrow">›</span></a>
+          </article>
+          <article class="audit-option">
+            <h3>Možnost B: Informativní důchodová aplikace IDA</h3>
+            <p>Vhodná pro základní orientaci v důchodových údajích a odhadu důchodu. IDA pracuje s daty z evidence ČSSZ a může pomoci poznat, co je potřeba ověřit.</p>
+            <a class="soft-link" href="https://www.cssz.cz/informativni-duchodova-aplikace-ida-" target="_blank" rel="noopener noreferrer">Zjistit více o IDA</a>
+          </article>
+          <article class="audit-option">
+            <h3>Možnost C: Žádost o IOLDP</h3>
+            <p>IOLDP znamená Informativní osobní list důchodového pojištění. Lze o něj požádat ČSSZ. Je vhodný pro lidi, kteří chtějí mít oficiální informativní přehled v listinné nebo elektronické podobě.</p>
+            <a class="soft-link" href="https://www.cssz.cz/informativni-osobni-list-duchodoveho-pojisteni" target="_blank" rel="noopener noreferrer">Informace k IOLDP</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt audit-anchor" id="casova-osa">
+      <div class="container">
+        <h2>Nejdřív si sepište vlastní životní časovou osu</h2>
+        <p class="section-copy">Než začnete hledat chyby v přehledu ČSSZ, sepište si vlastní přehled života. Díky tomu poznáte, jestli v evidenci něco chybí.</p>
+        <div class="audit-badge-row">
+          <span class="audit-badge blue">studium</span><span class="audit-badge blue">zaměstnání</span><span class="audit-badge blue">OSVČ</span><span class="audit-badge blue">Úřad práce</span><span class="audit-badge blue">mateřská a rodičovská</span><span class="audit-badge blue">péče o dítě do 4 let</span><span class="audit-badge blue">péče o osobu závislou</span><span class="audit-badge blue">nemocenská</span><span class="audit-badge blue">vojenská nebo civilní služba</span><span class="audit-badge blue">práce v zahraničí</span><span class="audit-badge blue">období bez práce nebo bez pojištění</span>
+        </div>
+        <div class="audit-table-wrap">
+          <table class="audit-table">
+            <thead><tr><th>Období</th><th>Co jsem dělal/a</th><th>Mám doklad?</th><th>Je to v přehledu ČSSZ?</th><th>Co dál</th></tr></thead>
+            <tbody>
+              <tr><td>09/1988-06/1992</td><td>studium</td><td>ano/ne</td><td>ano/ne</td><td>ověřit</td></tr>
+              <tr><td>07/1992-03/1998</td><td>zaměstnání</td><td>ano/ne</td><td>ano/ne</td><td>doložit</td></tr>
+              <tr><td>04/1998-09/1998</td><td>Úřad práce</td><td>ano/ne</td><td>ano/ne</td><td>ověřit</td></tr>
+              <tr><td>10/1998-12/2005</td><td>OSVČ</td><td>ano/ne</td><td>ano/ne</td><td>zkontrolovat pojistné</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audit-anchor" id="checklist">
+      <div class="container">
+        <h2>Co přesně zkontrolovat v přehledu</h2>
+        <p class="section-copy">Projděte body postupně. Cílem není hned všechno vyřešit, ale rozlišit, co sedí, co je potřeba ověřit a co už skutečně řešit.</p>
+        <div class="audit-download">
+          <a class="btn primary" href="checklist-kontrola-dob-duchodoveho-pojisteni.pdf" download>Stáhnout checklist PDF <span class="arrow">›</span></a>
+          <a class="soft-link" href="#oprava">Přejít na postup opravy</a>
+        </div>
+        <div class="audit-checklist">
+          <div class="audit-check"><span aria-hidden="true"></span><div>Sedí všechna vaše zaměstnání?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Sedí začátky a konce pracovních poměrů?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Nechybí některý zaměstnavatel?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Jsou od roku 1986 uvedené roční vyměřovací základy u let, kdy jste pracovali?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Nejsou některé roční příjmy nápadně nízké nebo nulové?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Sedí roky OSVČ?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Není některý rok OSVČ uveden jako nepojištěný?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Sedí evidence na Úřadu práce?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Sedí vojenská nebo civilní služba?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Sedí péče o dítě do 4 let?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Sedí péče o osobu závislou?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Týká se vás studium před rokem 2010 a máte k němu doklady?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Pracovali jste v zahraničí a máte k tomu vlastní doklady?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Jsou správně uvedené vyloučené doby, například nemocenská, péče nebo Úřad práce?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Jsou v přehledu neevidované doby, které neumíte vysvětlit?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Nejsou některé doby duplicitní nebo podezřele překryté?</div></div>
+<div class="audit-check"><span aria-hidden="true"></span><div>Nechybí poslední ukončený rok zaměstnání nebo OSVČ?</div></div>
+        </div>
+        <p class="section-copy" style="margin-top:24px"><strong>Důležité:</strong> Překryvy dob nejsou automaticky chyba. Pokud se dvě období překrývají, překrývající se část se do celkového součtu započítá pouze jednou.</p>
+      </div>
+    </section>
+
+    <section class="section alt audit-anchor" id="problemy">
+      <div class="container">
+        <h2>Kdy zbystřit</h2>
+        <p class="section-copy">Některé věci v přehledu znamenají, že je vhodné je ověřit. Ne všechno je chyba, ale některé nálezy si zaslouží pozornost.</p>
+        <div class="audit-warning-grid">
+          
+          <article class="audit-warning-card">
+            <span class="tag audit-badge orange">ověřit</span>
+            <h3>Neevidovaná doba</h3>
+            <p>ČSSZ u tohoto období nemá v evidenci žádný záznam. Nemusí to být chyba. Nejdřív si ověřte, co jste v té době dělali.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge red">řešit</span>
+            <h3>Chybějící zaměstnavatel</h3>
+            <p>Pokud víte, že jste pracovali, ale zaměstnání v přehledu není, je potřeba dohledat doklady.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge orange">ověřit</span>
+            <h3>Špatné datum</h3>
+            <p>Zaměstnání nebo jiná doba je uvedena, ale začátek nebo konec nesedí.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge orange">ověřit</span>
+            <h3>OSVČ nepojištěno</h3>
+            <p>Může znamenat, že nebylo zaplaceno pojistné nebo nevznikla účast na důchodovém pojištění.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge red">řešit</span>
+            <h3>Chybějící příjmy od roku 1986</h3>
+            <p>Příjmy od roku 1986 vstupují do výpočtu důchodu. U zaměstnance jde zjednodušeně o hrubé příjmy, ze kterých se odvádělo pojistné; u OSVČ o roční vyměřovací základ.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge blue">informace</span>
+            <h3>Práce v zahraničí</h3>
+            <p>Práce v zahraničí nemusí být v českém přehledu uvedena. Neznamená to automaticky chybu, ale je důležité mít k ní vlastní doklady.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge blue">informace</span>
+            <h3>Studium</h3>
+            <p>Studium se pro důchod hodnotí podle pravidel platných pro konkrétní období. Zvláštní pozornost věnujte hlavně studiu před rokem 2010.</p>
+          </article>
+
+          <article class="audit-warning-card">
+            <span class="tag audit-badge orange">ověřit</span>
+            <h3>Péče o dítě</h3>
+            <p>Péče o dítě do 4 let může být pro důchod důležitá, ale nemusí být v evidenci automaticky kompletně doložená.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audit-anchor" id="doklady">
+      <div class="container">
+        <h2>Co dohledat podle typu chybějící doby</h2>
+        <p class="section-copy">Doklady se liší podle toho, jaký typ období řešíte. Pokud si nejste jistí, začněte tím, co máte dostupné, a další postup konzultujte s OSSZ.</p>
+        <div class="audit-table-wrap">
+          <table class="audit-table">
+            <thead><tr><th>Typ doby</th><th>Co dohledat</th></tr></thead>
+            <tbody>
+              <tr><td>Zaměstnání</td><td>ELDP, pracovní smlouva, zápočtový list, výplatní pásky, mzdový list, potvrzení zaměstnavatele</td></tr>
+              <tr><td>Zaměstnání od roku 1996</td><td>kromě smlouvy také doklady o skutečném výkonu práce nebo příjmu</td></tr>
+              <tr><td>OSVČ</td><td>přehledy OSVČ, potvrzení OSSZ, doklady o zaplacení pojistného</td></tr>
+              <tr><td>Úřad práce</td><td>potvrzení Úřadu práce o době evidence, podpoře nebo rekvalifikaci</td></tr>
+              <tr><td>Studium</td><td>vysvědčení, diplom, index, potvrzení školy</td></tr>
+              <tr><td>Péče o dítě</td><td>čestné prohlášení o době a rozsahu péče, případně doklad o vztahu k dítěti</td></tr>
+              <tr><td>Péče o osobu závislou</td><td>rozhodnutí OSSZ o době a rozsahu péče</td></tr>
+              <tr><td>Vojenská nebo civilní služba</td><td>vojenská knížka, potvrzení archivu nebo příslušného orgánu</td></tr>
+              <tr><td>Nemocenská po skončení zaměstnání</td><td>potvrzení o pracovní neschopnosti nebo dávkách nemocenského pojištění</td></tr>
+              <tr><td>Práce v zahraničí</td><td>pracovní smlouvy, výplatní doklady, zahraniční číslo pojištění, potvrzení zahraniční instituce</td></tr>
+              <tr><td>Dobrovolné důchodové pojištění</td><td>přihláška, potvrzení OSSZ, doklad o zaplacení pojistného</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt audit-anchor" id="typ-problemu">
+      <div class="container">
+        <h2>Detailní postup podle typu problému</h2>
+        <p class="section-copy">Rozklikněte situaci, která se vás týká. Každá má trochu jiný postup a jiné doklady.</p>
+        
+        <details class="audit-detail">
+          <summary>Chybí zaměstnání</summary>
+          <div class="audit-detail-body">
+            <ol>
+              <li>Ověřte přesné období zaměstnání.</li><li>Zkontrolujte, zda máte ELDP nebo jeho kopii.</li><li>Pokud ELDP nemáte, dohledávejte pracovní smlouvu, zápočtový list, mzdové listy, výplatní pásky nebo potvrzení zaměstnavatele.</li><li>Pokud zaměstnavatel stále existuje, požádejte ho o potvrzení.</li><li>Pokud zaměstnavatel neexistuje, obraťte se na OSSZ a doložte vše, co máte.</li><li>Pokud nemáte doklady, mohou pomoci i bývalí kolegové formou svědeckého nebo čestného prohlášení, pokud to ČSSZ uzná.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Chybí OSVČ</summary>
+          <div class="audit-detail-body">
+            <ol>
+              <li>Zkontrolujte každý rok podnikání zvlášť.</li><li>Ověřte, zda jste byli účastni důchodového pojištění.</li><li>Zkontrolujte, zda bylo zaplaceno pojistné.</li><li>Dohledejte přehledy OSVČ a potvrzení OSSZ.</li><li>U let označených jako nepojištěné ověřte důvod.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Chybí Úřad práce</summary>
+          <div class="audit-detail-body">
+            <ol>
+              <li>Dohledejte, kdy jste byli v evidenci Úřadu práce.</li><li>Zjistěte, zda jste pobírali podporu v nezaměstnanosti nebo rekvalifikaci.</li><li>Požádejte Úřad práce o potvrzení.</li><li>Doložte potvrzení ČSSZ / OSSZ.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Chybí péče o dítě</summary>
+          <div class="audit-detail-body">
+            <ol>
+              <li>Sepište období péče o dítě do 4 let.</li><li>Připravte čestné prohlášení o době a rozsahu péče.</li><li>Připravte doklad o vztahu k dítěti, pokud je potřeba.</li><li>Doložte přes ePortál nebo OSSZ.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Chybí studium</summary>
+          <div class="audit-detail-body">
+            <ol>
+              <li>Ověřte, zda šlo o období, které se může pro důchod hodnotit.</li><li>Dohledejte vysvědčení, diplom, index nebo potvrzení školy.</li><li>Doložte studium ČSSZ / OSSZ.</li><li>Pravidla pro započtení studia se v čase měnila.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Chybí práce v zahraničí</summary>
+          <div class="audit-detail-body">
+            <ol>
+              <li>Sepište stát, období a zaměstnavatele.</li><li>Připravte pracovní smlouvy, výplatní doklady a zahraniční číslo pojištění.</li><li>Nečekejte, že český přehled bude zahraniční dobu automaticky obsahovat.</li><li>Při žádosti o důchod si ČSSZ obvykle vyžádá potvrzení od zahraniční instituce.</li><li>Přesto je dobré mít vlastní doklady připravené.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section audit-anchor" id="oprava">
+      <div class="container split">
+        <div>
+          <h2>Jak opravit nebo doplnit údaje</h2>
+          <p class="section-copy">Když najdete nesrovnalost, postupujte klidně a konkrétně. Nejlépe funguje přesně označit období, typ doby a přiložit dostupné doklady.</p>
+          <p class="section-copy"><strong>Nemáte elektronickou identitu?</strong> Obraťte se na kteroukoliv OSSZ nebo na svou OSSZ podle místa trvalého bydliště. Vezměte si s sebou doklady k období, které chcete řešit.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><h3>Označte přesné období</h3><p>Uveďte, co chybí nebo nesedí.</p></div></div>
+          <div class="step"><div class="step-num">2</div><div><h3>Určete typ doby</h3><p>Zaměstnání, OSVČ, Úřad práce, péče, studium, vojna nebo zahraničí.</p></div></div>
+          <div class="step"><div class="step-num">3</div><div><h3>Připravte doklady</h3><p>Přiložte vše, co prokazuje trvání a charakter období.</p></div></div>
+          <div class="step"><div class="step-num">4</div><div><h3>Pošlete návrh na doplnění</h3><p>Přes Moje konto na ePortálu ČSSZ nebo přes OSSZ.</p></div></div>
+          <div class="step"><div class="step-num">5</div><div><h3>Zkontrolujte nový přehled</h3><p>Po zpracování si stáhněte nový přehled a ověřte, zda byla změna provedena.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt audit-anchor" id="vzor">
+      <div class="container">
+        <h2>Vzor textu pro ČSSZ / OSSZ</h2>
+        <p class="section-copy">Text si upravte podle své situace. Neposílejte obecnou žádost - čím přesnější období a doklady, tím lépe.</p>
+        <div class="audit-table-wrap">
+          <div style="padding:24px;line-height:1.8;color:var(--text)">
+            <p>Žádám o prověření a doplnění doby důchodového pojištění za období od <strong>DD.MM.RRRR</strong> do <strong>DD.MM.RRRR</strong>.</p>
+            <p>V mém přehledu dob důchodového pojištění toto období chybí / je uvedeno nesprávně.</p>
+            <p>Jednalo se o zaměstnání / OSVČ / evidenci na Úřadu práce / studium / péči / vojenskou službu / jinou dobu.</p>
+            <p>Přikládám dostupné doklady:<br>…<br>…<br>…</p>
+            <p>Žádám o zápis, případně o informaci, jaké další doklady je nutné doložit.</p>
+            <p>Jméno a příjmení:<br>Rodné číslo nebo datum narození:<br>Adresa / datová schránka:<br>Telefon / e-mail:<br>Datum:</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audit-anchor" id="faq">
+      <div class="container">
+        <h2>Nejčastější otázky</h2>
+        <p class="section-copy">Krátké odpovědi na otázky, které se při kontrole evidovaných dob objevují nejčastěji.</p>
+        
+        <details class="audit-detail">
+          <summary>Jak často si mám přehled kontrolovat?</summary>
+          <div class="audit-detail-body"><p>Ideálně jednou za několik let. Určitě po delším období OSVČ, práce v zahraničí, péče, evidence na Úřadu práce nebo před plánováním důchodu.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Je neevidovaná doba vždy problém?</summary>
+          <div class="audit-detail-body"><p>Ne. Znamená pouze, že ČSSZ k danému období nemá záznam. Problém je to tehdy, pokud jste v té době pracovali, podnikali nebo měli náhradní dobu, která by měla být doložitelná.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Co když zaměstnavatel už neexistuje?</summary>
+          <div class="audit-detail-body"><p>Obraťte se na OSSZ a připravte všechny dostupné doklady. Pomoci mohou pracovní smlouvy, zápočtové listy, výplatní pásky, mzdové listy, výpisy z účtu nebo bývalí kolegové.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Stačí pracovní smlouva?</summary>
+          <div class="audit-detail-body"><p>Někdy pomůže, ale sama o sobě nemusí stačit. Často je potřeba prokázat i skutečný výkon práce, příjem nebo existenci pojištěného zaměstnání.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Musí být v přehledu práce v zahraničí?</summary>
+          <div class="audit-detail-body"><p>Ne vždy. Práci v zahraničí často eviduje zahraniční instituce. Česká ČSSZ si potvrzení zpravidla vyžádá v důchodovém řízení.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Co jsou vyměřovací základy?</summary>
+          <div class="audit-detail-body"><p>Zjednodušeně jde u zaměstnance o roční hrubé příjmy, ze kterých se odvádělo pojistné. U OSVČ jde o roční vyměřovací základ pro pojistné.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Co jsou vyloučené doby?</summary>
+          <div class="audit-detail-body"><p>Období, která se při výpočtu důchodu zvláštně zohledňují, aby zbytečně nesnižovala průměrný příjem. Typicky nemocenská, péče, Úřad práce nebo některé další situace.</p></div>
+        </details>
+
+        <details class="audit-detail">
+          <summary>Když je doba evidovaná, znamená to, že se celá započítá?</summary>
+          <div class="audit-detail-body"><p>Ne automaticky. Přehled ukazuje, co má ČSSZ v evidenci. Konečné hodnocení dob probíhá až podle pravidel platných pro konkrétní důchod.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div class="container contact-grid">
+        <div>
+          <h2>Chcete pomoct s kontrolou penzijních údajů?</h2>
+          <p class="section-copy">Napište mi pár údajů. Ozvu se vám a krátce si řekneme, co chcete zkontrolovat a kde případně potřebujete pomoct.</p>
+          <div class="contact-list">
+            <div class="contact-point"><span class="tick">✓</span> Nejdřív si řekneme, co chcete ověřit</div>
+            <div class="contact-point"><span class="tick">✓</span> Pomohu vám zorientovat se v evidovaných údajích</div>
+            <div class="contact-point"><span class="tick">✓</span> Až potom případně navážeme dalším krokem</div>
+          </div>
+          <div class="direct-contact">
+            <strong>Přímý kontakt</strong>
+            <a href="tel:+420723950583">723 950 583</a>
+            <a href="mailto:david.zara@4fin.cz">david.zara@4fin.cz</a>
+          </div>
+        </div>
+
+        <form class="form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="b73262e9-1e6e-4062-b94e-d2e6530dd519">
+          <input type="hidden" name="subject" value="Nový lead – Penzijní audit">
+          <input type="hidden" name="from_name" value="davidzara.cz">
+          <input type="hidden" name="redirect" value="https://davidzara.cz/dekuji.html">
+          <input type="hidden" name="tema" value="Penzijní audit">
+          <input type="checkbox" name="botcheck" style="display:none">
+          <div class="form-row">
+            <label>Jméno a příjmení<input name="jmeno" type="text" required placeholder="Jan Novák" autocomplete="name"></label>
+            <label>Telefon<input name="telefon" type="tel" required placeholder="+420 777 000 000" autocomplete="tel"></label>
+          </div>
+          <div class="form-row">
+            <label>E-mail<input name="email" type="email" placeholder="jan@email.cz" autocomplete="email"></label>
+            <label>Téma<input name="tema_viditelne" type="text" value="Penzijní audit" readonly></label>
+          </div>
+          <label>Zpráva<textarea name="zprava" placeholder="Napište stručně, co chcete zkontrolovat. Například chybějící dobu zaměstnání, podnikání nebo obecně kontrolu údajů u ČSSZ."></textarea></label>
+          <label class="consent"><input type="checkbox" name="souhlas" required><span>Souhlasím se zpracováním osobních údajů za účelem kontaktování. Více v <a href="zasady-zpracovani-osobnich-udaju.html">zásadách ochrany osobních údajů</a>.</span></label>
+          <button class="btn primary" type="submit">Chci pomoct s kontrolou <span class="arrow">›</span></button>
+          <div class="form-note">Odesláním formuláře nevzniká žádný závazek ke sjednání finančního produktu.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="upozorneni">
+      <div class="container">
+        <div class="audit-notice">
+          <h2>Důležité upozornění</h2>
+          <p>Tento návod je pouze informativní. Přehled dob důchodového pojištění ukazuje údaje vedené v evidenci ČSSZ. To, zda a v jakém rozsahu budou jednotlivé doby započteny pro nárok na důchod a jeho výši, vždy posuzuje Česká správa sociálního zabezpečení podle platné právní úpravy. Oficiální rozhodnutí vydává výhradně ČSSZ.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2>Nejdřív ověřit data.<br>Teprve potom plánovat penzi.</h2>
+      <p>Když víte, z čeho se bude důchod počítat, můžete další finanční kroky řešit s větším klidem.</p>
+    </footer>
+
+    <a class="audit-mobile-sticky" href="#checklist">Stáhnout checklist</a>
+
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jak často si mám přehled kontrolovat?", "acceptedAnswer": {"@type": "Answer", "text": "Ideálně jednou za několik let. Určitě po delším období OSVČ, práce v zahraničí, péče, evidence na Úřadu práce nebo před plánováním důchodu."}}, {"@type": "Question", "name": "Je neevidovaná doba vždy problém?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Znamená pouze, že ČSSZ k danému období nemá záznam. Problém je to tehdy, pokud jste v té době pracovali, podnikali nebo měli náhradní dobu, která by měla být doložitelná."}}, {"@type": "Question", "name": "Co když zaměstnavatel už neexistuje?", "acceptedAnswer": {"@type": "Answer", "text": "Obraťte se na OSSZ a připravte všechny dostupné doklady. Pomoci mohou pracovní smlouvy, zápočtové listy, výplatní pásky, mzdové listy, výpisy z účtu nebo bývalí kolegové."}}, {"@type": "Question", "name": "Stačí pracovní smlouva?", "acceptedAnswer": {"@type": "Answer", "text": "Někdy pomůže, ale sama o sobě nemusí stačit. Často je potřeba prokázat i skutečný výkon práce, příjem nebo existenci pojištěného zaměstnání."}}, {"@type": "Question", "name": "Musí být v přehledu práce v zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Ne vždy. Práci v zahraničí často eviduje zahraniční instituce. Česká ČSSZ si potvrzení zpravidla vyžádá v důchodovém řízení."}}, {"@type": "Question", "name": "Co jsou vyměřovací základy?", "acceptedAnswer": {"@type": "Answer", "text": "Zjednodušeně jde u zaměstnance o roční hrubé příjmy, ze kterých se odvádělo pojistné. U OSVČ jde o roční vyměřovací základ pro pojistné."}}, {"@type": "Question", "name": "Co jsou vyloučené doby?", "acceptedAnswer": {"@type": "Answer", "text": "Období, která se při výpočtu důchodu zvláštně zohledňují, aby zbytečně nesnižovala průměrný příjem. Typicky nemocenská, péče, Úřad práce nebo některé další situace."}}, {"@type": "Question", "name": "Když je doba evidovaná, znamená to, že se celá započítá?", "acceptedAnswer": {"@type": "Answer", "text": "Ne automaticky. Přehled ukazuje, co má ČSSZ v evidenci. Konečné hodnocení dob probíhá až podle pravidel platných pro konkrétní důchod."}}]}
+    </script>
+
+<script src="site-nav.js"></script>
+</body>
+</html>

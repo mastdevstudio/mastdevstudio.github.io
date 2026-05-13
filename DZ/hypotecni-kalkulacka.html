@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fff8ef">
+  <meta name="msapplication-TileColor" content="#fff8ef">
+  <meta name="msapplication-config" content="browserconfig.xml">
+<title>Hypoteční kalkulačka | David Žára</title>
+  <meta name="description" content="Orientační hypoteční kalkulačka pro první přehled o splátce, vlastních zdrojích a zatížení domácnosti.">
+  <link rel="canonical" href="https://davidzara.cz/hypotecni-kalkulacka.html">
+  <link rel="preload" as="image" href="logo.png" type="image/png">
+  <link rel="preload" as="image" href="hero-hypotecni-kalkulacka.jpg" type="image/jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hypoteční kalkulačka | David Žára">
+  <meta property="og:description" content="Orientační hypoteční kalkulačka pro první přehled o hypotéce.">
+  <meta property="og:image" content="https://davidzara.cz/hero-hypotecni-kalkulacka.jpg">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="stylesheet" href="page-hypotecni-kalkulacka.css">
+
+<link rel="stylesheet" href="site-clean.css">
+<link rel="stylesheet" href="site-fixed-header.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Značka a poradce">
+        <a class="brand-4fin" href="https://www.4fin.cz/pro-klienty" target="_blank" rel="noopener noreferrer" aria-label="4fin Better together – otevřít web 4fin">
+          <img class="brand-logo" src="logo.png" alt="4fin Better together" decoding="async">
+        </a>
+        <div class="brand-line" aria-hidden="true"></div>
+        <a class="brand-home" href="index.html" aria-label="David Žára – hlavní stránka">
+          <div class="brand-name"><strong>David Žára</strong><span>Senior finanční konzultant</span></div>
+        </a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span>Menu</span>
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav main-nav" id="main-nav" aria-label="Hlavní navigace">
+        <a class="nav-link" href="index.html">Hlavní stránka</a>
+
+        <div class="nav-item has-dropdown">
+          <button class="nav-link nav-trigger active" type="button" aria-expanded="false">
+            S čím pomohu <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="hypoteky.html">
+              <strong>Hypotéky</strong>
+              <span>Možnosti, banky, příprava a bezpečná splátka</span>
+            </a>
+            <a class="dropdown-link" href="refinancovani-hypoteky.html">
+              <strong>Refinancování hypotéky</strong>
+              <span>Ověřit, jestli změna banky nebo fixace dává finanční smysl</span>
+            </a>
+            <a class="dropdown-link active" href="hypotecni-kalkulacka.html">
+              <strong>Hypoteční kalkulačka</strong>
+              <span>Orientačně spočítat splátku a zatížení rozpočtu</span>
+            </a>
+            <a class="dropdown-link" href="zivotni-pojisteni.html">
+              <strong>Životní pojištění</strong>
+              <span>Ochrana příjmu, invalidita, nemoc a úraz</span>
+            </a>
+            <a class="dropdown-link" href="pojisteni-majetku.html">
+              <strong>Pojištění majetku</strong>
+              <span>Dům, byt, domácnost a kontrola podpojištění</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <button class="nav-link nav-trigger" type="button" aria-expanded="false">
+            Penze <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu compact">
+            <a class="dropdown-link" href="penzijni-audit.html">
+              <strong>Penzijní audit</strong>
+              <span>Kontrola evidovaných dob u ČSSZ</span>
+            </a>
+            <a class="dropdown-link" href="duchodova-kalkulacka.html">
+              <strong>Důchodová kalkulačka</strong>
+              <span>Orientační výpočet penzijní mezery</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+  <main class="calc-page">
+    <section class="hero calculators-hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>
+            <span>Hypotéka nemá být jen o tom,</span>
+            <span class="accent">kolik vám banka půjčí.</span>
+          </h1>
+
+          <p class="headline-addon">Důležité je vědět, jestli ji zvládnete bezpečně splácet.</p>
+
+          <p class="lead">
+            Orientačně si spočítejte měsíční splátku, potřebné vlastní peníze, zatížení rozpočtu i to, jak by se splátka změnila při jiné úrokové sazbě.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#mortgage-calculator">Spočítat hypotéku <span class="arrow">›</span></a>
+          </div>
+
+          <div class="trust-line">
+            <span class="tick">✓</span>
+            <div>Výpočet je orientační. Nejde o nabídku úvěru ani garanci schválení bankou.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-strip-inner">
+        <div><span class="tick">✓</span> Měsíční splátka</div>
+        <div><span class="tick">✓</span> Potřebné vlastní peníze</div>
+        <div><span class="tick">✓</span> Zatížení rozpočtu</div>
+        <div><span class="tick">✓</span> Scénář jiné sazby</div>
+      </div>
+    </section>
+<section class="section alt">
+      <div class="container">
+        <div id="mortgage-calculator" class="calculator-shell active">
+          <div class="calc-stepper" id="mortgage-stepper" aria-label="Postup kalkulačky">
+            <div class="step-pill active" data-step="basic"><span>1</span>Základní odhad</div>
+            <div class="step-pill" data-step="extended"><span>2</span>Zpřesnění</div>
+            <div class="step-pill" data-step="advanced"><span>3</span>Detail</div>
+            <div class="step-pill" data-step="contact"><span>4</span>Kontakt</div>
+          </div>
+          <div class="calc-layout">
+            <div class="calc-form-stack">
+              <section class="calc-panel">
+                <h2>Hypoteční kalkulačka</h2>
+                <p>Vyplňte základní údaje. Výsledek ukáže splátku, vlastní zdroje a bezpečnost rozpočtu.</p>
+                <div class="calc-fields">
+                  <div class="calc-field full"><label for="m-purpose">Účel financování</label><select id="m-purpose">
+  <option value="purchase">Koupě nemovitosti</option>
+  <option value="construction">Výstavba domu</option>
+  <option value="renovation">Rekonstrukce</option>
+  <option value="purchase_renovation">Koupě + rekonstrukce</option>
+  <option value="settlement">Vypořádání / převod podílu</option>
+  <option value="other_housing">Jiné řešení bydlení</option>
+</select><span class="helper">Vyberte možnost, která nejlépe odpovídá vašemu záměru.</span></div>
+
+                  <div class="calc-field full mortgage-purpose-note" id="purpose-note">
+                    Vyberte účel. Níže se zobrazí jen pole, která dávají pro daný případ smysl.
+                  </div>
+
+                  <div class="calc-purpose-fields full" data-purpose-panel="purchase">
+                    <h3>Koupě nemovitosti</h3>
+                    <p class="inline-note">Pro běžnou koupi stačí znát kupní cenu, vlastní zdroje, příjem a závazky. Pokud máte odhad hodnoty, můžete ho doplnit níže.</p>
+                    <div class="calc-fields inner-fields">
+                      <div class="calc-field"><label for="m-purchase-price">Kupní cena</label><input id="m-purchase-price" type="number" inputmode="numeric" placeholder="Např. 5 000 000"></div>
+                      <div class="calc-field"><label for="m-use-type">Využití nemovitosti</label><select id="m-use-type"><option value="own">Vlastní bydlení</option><option value="rent">Pronájem / investice</option><option value="mixed">Kombinace</option></select></div>
+                    </div>
+                  </div>
+
+                  <div class="calc-purpose-fields full calc-hidden" data-purpose-panel="construction">
+                    <h3>Výstavba domu</h3>
+                    <p class="inline-note">U výstavby je důležitý pozemek, rozpočet stavby, budoucí hodnota po dokončení a čerpání po etapách.</p>
+                    <div class="calc-fields inner-fields">
+                      <div class="calc-field"><label for="m-land-owned">Je pozemek už ve vlastnictví?</label><select id="m-land-owned"><option value="yes">Ano</option><option value="no">Ne, budu ho také financovat</option></select></div>
+                      <div class="calc-field"><label for="m-land-value">Hodnota / cena pozemku</label><input id="m-land-value" type="number" inputmode="numeric" placeholder="Např. 1 500 000"></div>
+                      <div class="calc-field"><label for="m-construction-budget">Rozpočet stavby</label><input id="m-construction-budget" type="number" inputmode="numeric" placeholder="Např. 4 500 000"></div>
+                      <div class="calc-field"><label for="m-future-value">Odhad hodnoty po dokončení</label><input id="m-future-value" type="number" inputmode="numeric" placeholder="Např. 7 000 000"></div>
+                      <div class="calc-field"><label for="m-construction-reserve">Rezerva na navýšení rozpočtu</label><input id="m-construction-reserve" type="number" inputmode="numeric" placeholder="Např. 300 000"></div>
+                      <div class="calc-field"><label for="m-build-stages">Počet etap čerpání</label><input id="m-build-stages" type="number" inputmode="numeric" placeholder="Např. 4"></div>
+                      <div class="calc-field"><label for="m-build-completion">Plánované dokončení</label><input id="m-build-completion" placeholder="Např. 06/2027"></div>
+                    </div>
+                  </div>
+
+                  <div class="calc-purpose-fields full calc-hidden" data-purpose-panel="renovation">
+                    <h3>Rekonstrukce</h3>
+                    <p class="inline-note">U rekonstrukce je zásadní současná hodnota, rozpočet prací a očekávaná hodnota po rekonstrukci.</p>
+                    <div class="calc-fields inner-fields">
+                      <div class="calc-field"><label for="m-current-property-value">Současná hodnota nemovitosti</label><input id="m-current-property-value" type="number" inputmode="numeric" placeholder="Např. 4 000 000"></div>
+                      <div class="calc-field"><label for="m-renovation-budget">Rozpočet rekonstrukce</label><input id="m-renovation-budget" type="number" inputmode="numeric" placeholder="Např. 900 000"></div>
+                      <div class="calc-field"><label for="m-after-renovation-value">Odhad hodnoty po rekonstrukci</label><input id="m-after-renovation-value" type="number" inputmode="numeric" placeholder="Např. 5 200 000"></div>
+                      <div class="calc-field"><label for="m-renovation-reserve">Rezerva na vícenáklady</label><input id="m-renovation-reserve" type="number" inputmode="numeric" placeholder="Např. 150 000"></div>
+                      <div class="calc-field"><label for="m-renovation-drawdown">Čerpání</label><select id="m-renovation-drawdown"><option value="single">Najednou</option><option value="gradual">Postupně</option></select></div>
+                    </div>
+                  </div>
+
+                  <div class="calc-purpose-fields full calc-hidden" data-purpose-panel="purchase_renovation">
+                    <h3>Koupě + rekonstrukce</h3>
+                    <p class="inline-note">Tady je potřeba oddělit kupní cenu a rozpočet rekonstrukce. Jinak může výsledek zkreslit skutečnou potřebu peněz.</p>
+                    <div class="calc-fields inner-fields">
+                      <div class="calc-field"><label for="m-pr-purchase-price">Kupní cena</label><input id="m-pr-purchase-price" type="number" inputmode="numeric" placeholder="Např. 4 200 000"></div>
+                      <div class="calc-field"><label for="m-pr-renovation-budget">Rozpočet rekonstrukce</label><input id="m-pr-renovation-budget" type="number" inputmode="numeric" placeholder="Např. 800 000"></div>
+                      <div class="calc-field"><label for="m-pr-after-value">Odhad hodnoty po rekonstrukci</label><input id="m-pr-after-value" type="number" inputmode="numeric" placeholder="Např. 5 500 000"></div>
+                      <div class="calc-field"><label for="m-pr-reserve">Rezerva na rekonstrukci</label><input id="m-pr-reserve" type="number" inputmode="numeric" placeholder="Např. 150 000"></div>
+                      <div class="calc-field"><label for="m-pr-drawdown">Čerpání rekonstrukce</label><select id="m-pr-drawdown"><option value="single">Najednou</option><option value="gradual">Postupně</option></select></div>
+                    </div>
+                  </div>
+
+                  <div class="calc-purpose-fields full calc-hidden" data-purpose-panel="settlement">
+                    <h3>Vypořádání / převod podílu</h3>
+                    <p class="inline-note">Použijte pro vyplacení spoluvlastníka, vypořádání po rozvodu nebo dědictví. Klíčová je hodnota celé nemovitosti a částka k vyplacení.</p>
+                    <div class="calc-fields inner-fields">
+                      <div class="calc-field"><label for="m-settlement-type">Typ vypořádání</label><select id="m-settlement-type"><option value="share">Podílové spoluvlastnictví</option><option value="divorce">Rozvod / SJM</option><option value="inheritance">Dědictví</option><option value="other">Jiné</option></select></div>
+                      <div class="calc-field"><label for="m-settlement-property-value">Hodnota celé nemovitosti</label><input id="m-settlement-property-value" type="number" inputmode="numeric" placeholder="Např. 5 000 000"></div>
+                      <div class="calc-field"><label for="m-payout-amount">Částka k vyplacení</label><input id="m-payout-amount" type="number" inputmode="numeric" placeholder="Např. 1 500 000"></div>
+                      <div class="calc-field"><label for="m-current-share">Můj současný podíl</label><input id="m-current-share" placeholder="Např. 1/2"></div>
+                      <div class="calc-field"><label for="m-final-share">Podíl po vypořádání</label><input id="m-final-share" placeholder="Např. 1/1"></div>
+                      <div class="calc-field"><label for="m-existing-mortgage">Je na nemovitosti hypotéka?</label><select id="m-existing-mortgage"><option value="no">Ne</option><option value="yes">Ano</option></select></div>
+                      <div class="calc-field"><label for="m-existing-mortgage-balance">Zůstatek současné hypotéky</label><input id="m-existing-mortgage-balance" type="number" inputmode="numeric" placeholder="Např. 900 000"></div>
+                      <div class="calc-field"><label for="m-current-debtor">Kdo je dnes dlužník?</label><input id="m-current-debtor" placeholder="Např. oba manželé / spoluvlastník"></div>
+                    </div>
+                  </div>
+
+                  <div class="calc-purpose-fields full calc-hidden" data-purpose-panel="other_housing">
+                    <h3>Jiné řešení bydlení</h3>
+                    <p class="inline-note">Pokud váš případ nesedí přesně do běžných šablon, popište ho. Výsledek bude orientační a bude vyžadovat individuální kontrolu.</p>
+                    <div class="calc-fields inner-fields">
+                      <div class="calc-field full"><label for="m-other-housing-description">Stručný popis situace</label><textarea id="m-other-housing-description" placeholder="Např. kombinace koupě podílu, rekonstrukce a dalšího zajištění."></textarea></div>
+                      <div class="calc-field"><label for="m-other-needed-amount">Potřebná částka</label><input id="m-other-needed-amount" type="number" inputmode="numeric" placeholder="Např. 2 000 000"></div>
+                      <div class="calc-field"><label for="m-other-collateral-value">Hodnota zajištění</label><input id="m-other-collateral-value" type="number" inputmode="numeric" placeholder="Např. 3 500 000"></div>
+                    </div>
+                  </div>
+
+                  <div class="calc-field"><label for="m-price" id="m-price-label">Cena / hodnota nemovitosti nebo celková potřeba</label><input id="m-price" type="number" inputmode="numeric" value="5000000"><span class="helper" id="m-price-helper">U koupě zadejte kupní cenu. U ostatních účelů se částka může dopočítat z doplňujících polí níže.</span></div>
+                  <div class="calc-field"><label for="m-own">Vaše vlastní peníze</label><input id="m-own" type="number" inputmode="numeric" value="1000000"><span class="helper">Úspory nebo prostředky, které chcete vložit.</span></div>
+                  <div class="calc-field"><label for="m-income">Čistý měsíční příjem domácnosti</label><input id="m-income" type="number" inputmode="numeric" value="55000"><span class="helper">Zadejte hlavní čistý měsíční příjem.</span></div>
+                  <div class="calc-field"><label for="m-years">Doba splácení</label><input id="m-years" type="number" inputmode="numeric" value="30" min="1" max="35"><span class="helper">Orientačně 20 až 30 let, maximálně podle věku a banky.</span></div>
+                  <div class="calc-field"><label for="m-age">Věk hlavního žadatele</label><input id="m-age" type="number" inputmode="numeric" value="35" min="18" max="75"><span class="helper">Věk může ovlivnit dostupnou splatnost.</span></div>
+                  <div class="calc-field"><label for="m-rate">Orientační / průměrná úroková sazba v %</label><input id="m-rate" type="number" step="0.01" inputmode="decimal" placeholder="Např. 5,29"><span class="helper">Statická stránka neumí sama spolehlivě načíst aktuální tržní sazbu. Pokud sazbu neupravíte, použije se modelová orientační sazba.</span></div>
+                </div>
+                <div class="calc-actions"><button id="m-calculate" class="btn primary" type="button">Spočítat hypotéku <span class="arrow">›</span></button></div>
+              </section>
+
+              <section id="after-basic" class="calc-panel calc-hidden">
+                <h3>Chcete výsledek zpřesnit?</h3><p>Doplníme domácnost, závazky, typ příjmu a případné zajištění. Nejde o bankovní žádost.</p>
+                <div class="calc-actions"><button id="m-extend" class="btn primary" type="button">Zpřesnit výpočet</button><button class="btn secondary" type="button" data-open-lead>Chci rovnou probrat možnosti</button></div>
+              </section>
+
+              <section id="extended-section" class="calc-panel calc-hidden">
+                <h2>Zpřesnění výpočtu</h2><p class="inline-note">Tady se ukáže, jestli může pomoci spolužadatel, doplacení závazků nebo další zástava.</p>
+                <h3>Domácnost</h3>
+                <div class="calc-fields">
+                  <div class="calc-field"><label for="m-adults">Počet dospělých</label><input id="m-adults" type="number" value="2"></div>
+                  <div class="calc-field"><label for="m-children">Počet dětí</label><input id="m-children" type="number" value="0"></div>
+                  <div class="calc-field"><label for="m-marital">Rodinný stav</label><select id="m-marital"><option value="">Vyberte</option><option>Svobodný/á</option><option>Ženatý / vdaná</option><option>Partnerství</option><option>Rozvedený/á</option></select></div>
+                  <div class="calc-field"><label for="m-applicants">Budete žádat sami, nebo ve dvou?</label><select id="m-applicants"><option value="one">Sám / sama</option><option value="two">Ve dvou</option></select></div>
+                </div>
+                <div id="second-applicant-fields" class="calc-fields calc-hidden"><div class="calc-field"><label for="m-income-second">Příjem druhého žadatele</label><input id="m-income-second" type="number" inputmode="numeric"></div><div class="calc-field"><label for="m-age-second">Věk druhého žadatele</label><input id="m-age-second" type="number" inputmode="numeric"></div></div>
+
+                <h3>Současné závazky</h3>
+                <div class="calc-fields"><div class="calc-field"><label for="m-has-debts">Máte jiné úvěry?</label><select id="m-has-debts"><option value="no">Ne</option><option value="yes">Ano</option></select></div></div>
+                <div id="debt-fields" class="calc-fields calc-hidden"><div class="calc-field"><label for="m-other-payments">Měsíční splátky ostatních úvěrů</label><input id="m-other-payments" type="number"></div><div class="calc-field"><label for="m-other-balance">Celkový zůstatek ostatních úvěrů</label><input id="m-other-balance" type="number"></div><div class="calc-field"><label for="m-cards">Kreditní karty / kontokorenty</label><input id="m-cards" type="number"></div><div class="calc-field"><label for="m-alimony">Výživné</label><input id="m-alimony" type="number"></div><div class="calc-field full"><label for="m-other-mandatory">Jiné pravidelné povinné platby</label><input id="m-other-mandatory" type="number"></div></div>
+
+                <h3>Doplacení závazků</h3>
+                <div class="calc-fields"><div class="calc-field"><label for="m-payoff">Budou některé závazky doplaceny?</label><select id="m-payoff"><option value="no">Ne</option><option value="yes">Ano</option></select><span class="helper">Zobrazíme budoucí stav po transakci.</span></div></div>
+                <div id="payoff-fields" class="calc-hidden"><div id="debt-list" class="added-list"></div><button id="add-debt" class="btn secondary" type="button">Přidat doplácený závazek</button></div>
+
+                <h3>Nemovitost a zajištění</h3>
+                <div class="calc-fields"><div class="calc-field"><label for="m-valuation-known">Znáte odhadní hodnotu nemovitosti?</label><select id="m-valuation-known"><option value="no">Ne</option><option value="yes">Ano</option></select></div><div id="valuation-field" class="calc-field calc-hidden"><label for="m-valuation">Odhadní hodnota nemovitosti</label><input id="m-valuation" type="number"></div><div class="calc-field"><label for="m-collateral">Můžete ručit další nemovitostí?</label><select id="m-collateral"><option value="no">Ne</option><option value="yes">Ano</option></select></div></div>
+                <div id="collateral-fields" class="calc-fields calc-hidden"><div class="calc-field"><label for="m-collateral-value">Odhadní hodnota další nemovitosti</label><input id="m-collateral-value" type="number"></div><div class="calc-field"><label for="m-collateral-owner">Kdo je vlastník další nemovitosti?</label><input id="m-collateral-owner" placeholder="Např. rodiče, partner, já"></div><div class="calc-field"><label for="m-collateral-debt-yes">Je na ní jiná zástava?</label><select id="m-collateral-debt-yes"><option value="no">Ne</option><option value="yes">Ano</option></select></div><div id="collateral-debt-field" class="calc-field calc-hidden"><label for="m-collateral-debt">Orientační zbývající dluh</label><input id="m-collateral-debt" type="number"></div></div>
+
+                <h3>Typ příjmu</h3>
+                <div class="calc-fields"><div class="calc-field"><label for="m-income-type">Jaký typ příjmu máte?</label><select id="m-income-type"><option value="employee">Zaměstnanec</option><option value="self_employed">OSVČ</option><option value="rent">Příjem z pronájmu</option><option value="parental">Rodičovský příspěvek</option><option value="pension">Důchod</option><option value="foreign">Zahraniční příjem</option><option value="combined">Kombinace více příjmů</option></select><span class="helper">Nestandardní příjem neznamená stopku, jen individuální posouzení.</span></div></div>
+                <div id="foreign-income-fields" class="calc-fields calc-hidden"><div class="calc-field"><label for="m-foreign-country">Země</label><input id="m-foreign-country" placeholder="Např. Německo"></div><div class="calc-field"><label for="m-foreign-currency">Měna příjmu</label><input id="m-foreign-currency" placeholder="EUR, USD…"></div></div>
+              </section>
+
+              <section id="after-extended" class="calc-panel calc-hidden"><h3>Chcete pokračovat do detailu?</h3><p>Detail dává smysl u výstavby, rekonstrukce, koupě s rekonstrukcí, vypořádání, OSVČ nebo více závazků.</p><div class="calc-actions"><button id="m-advanced" class="btn primary" type="button">Pokračovat na detailní výpočet</button><button class="btn secondary" type="button" data-open-lead>Chci porovnat varianty</button></div></section>
+
+              <section id="advanced-section" class="calc-panel calc-hidden">
+                <h2>Detailní orientační výpočet</h2>
+                <h3>Přesný typ případu</h3><div class="calc-fields"><div class="calc-field full"><label for="m-case-type">Typ případu</label><select id="m-case-type">
+<option value="purchase">Koupě nemovitosti</option>
+<option value="construction">Výstavba domu</option>
+<option value="renovation">Rekonstrukce</option>
+<option value="purchase_renovation">Koupě + rekonstrukce</option>
+<option value="settlement">Vypořádání / převod podílu</option>
+<option value="other_housing">Jiné řešení bydlení</option>
+</select></div></div>
+                <h3>Příjmová stabilita</h3><div class="calc-fields"><div class="calc-field"><label for="m-employment-type">Typ pracovního poměru</label><input id="m-employment-type" placeholder="Zaměstnanec, OSVČ…"></div><div class="calc-field"><label for="m-employment-length">Délka zaměstnání nebo podnikání</label><input id="m-employment-length" placeholder="Např. 3 roky"></div><div class="calc-field"><label for="m-contract">Smlouva na dobu</label><select id="m-contract"><option value="">Vyberte</option><option>Neurčitou</option><option>Určitou</option></select></div><div class="calc-field"><label for="m-probation">Zkušební doba</label><select id="m-probation"><option value="">Vyberte</option><option value="no">Ne</option><option value="yes">Ano</option></select></div><div class="calc-field"><label for="m-seasonal">Sezónnost příjmu</label><select id="m-seasonal"><option value="">Vyberte</option><option value="no">Ne</option><option value="yes">Ano</option></select></div><div class="calc-field"><label for="m-average-income">Průměrný čistý příjem za 6 až 12 měsíců</label><input id="m-average-income" type="number"></div><div class="calc-field"><label for="m-other-income">Další pravidelné příjmy</label><input id="m-other-income" type="number"></div></div>
+                <h3>Čerpání úvěru</h3><div class="calc-fields"><div class="calc-field"><label for="m-drawdown">Způsob čerpání</label><select id="m-drawdown"><option value="single">Jednorázové</option><option value="gradual">Postupné</option></select></div></div><div id="drawdown-fields" class="calc-fields calc-hidden"><div class="calc-field"><label for="m-drawdown-months">Délka čerpání v měsících</label><input id="m-drawdown-months" type="number"></div><div class="calc-field"><label for="m-stages">Počet etap</label><input id="m-stages" type="number"></div><div class="calc-field"><label for="m-completion">Termín dokončení</label><input id="m-completion" placeholder="Např. 06/2027"></div></div>
+                <h3>Původ vlastních peněz</h3><div class="calc-fields"><div class="calc-field"><label for="m-own-source">Zdroj vlastních peněz</label><select id="m-own-source"><option value="savings">Úspory</option><option value="gift">Dar</option><option value="sale_property">Prodej jiné nemovitosti</option><option value="building_savings">Stavební spoření</option><option value="combined">Kombinace</option></select></div></div><div id="sale-property-fields" class="calc-fields calc-hidden"><div class="calc-field"><label for="m-sale-price">Odhad prodejní ceny</label><input id="m-sale-price" type="number"></div><div class="calc-field"><label for="m-sale-when">Kdy budou peníze k dispozici?</label><input id="m-sale-when" placeholder="Např. do 3 měsíců"></div><div class="calc-field"><label for="m-bridge">Potřebujete překlenout období do prodeje?</label><select id="m-bridge"><option value="no">Ne</option><option value="yes">Ano</option></select></div></div>
+                <h3>Rizikové faktory</h3><p class="inline-note">Tyto údaje slouží jen k přesnějšímu orientačnímu odhadu.</p><div class="calc-fields"><div class="calc-field"><label for="m-repayment-problems">Problémy se splácením?</label><select id="m-repayment-problems"><option value="">Vyberte</option><option value="no">Ne</option><option value="yes">Ano</option></select></div><div class="calc-field"><label for="m-execution">Exekuce nebo insolvence?</label><select id="m-execution"><option value="">Vyberte</option><option value="no">Ne</option><option value="yes">Ano</option></select></div><div class="calc-field"><label for="m-overdue">Závazky po splatnosti?</label><select id="m-overdue"><option value="">Vyberte</option><option value="no">Ne</option><option value="yes">Ano</option></select></div></div>
+                <h3>Parametry úvěru</h3><div class="calc-fields"><div class="calc-field"><label for="m-fixation">Preferovaná fixace</label><input id="m-fixation" value="5 let"></div><div class="calc-field"><label for="m-requested-loan">Požadovaná výše úvěru</label><input id="m-requested-loan" type="number" placeholder="Nechte prázdné pro automatický výpočet"><span class="helper">Vyplňte jen tehdy, pokud chcete ručně přepsat výpočet z ceny a vlastních peněz.</span><div class="calc-micro-warning" id="requested-loan-field-warning">Požadovaná výše úvěru je zadaná ručně. Cena nemovitosti a vlastní peníze pak slouží hlavně pro orientační poměr zajištění.</div></div><div class="calc-field"><label for="m-preferred-payment">Preferovaná maximální splátka</label><input id="m-preferred-payment" type="number"></div></div>
+                <div class="calc-actions"><button class="btn primary" type="button" data-open-lead>Chci nezávazně zkontrolovat možnosti</button><button class="btn secondary" type="button" data-open-lead>Chci porovnat varianty</button></div>
+              </section>
+</div>
+
+            <aside class="calc-summary" id="mortgage-summary">
+              <div class="calc-summary-title">Váš orientační výsledek</div><div id="sum-status" class="result-status">Bude potřeba doplnit údaje</div>
+              <div class="summary-value primary"><span>Orientační měsíční splátka</span><strong id="sum-payment">—</strong></div>
+              <div class="summary-value"><span>Orientační výše úvěru</span><strong id="sum-loan">—</strong></div>
+              <div class="summary-value"><span>Chybějící vlastní peníze</span><strong id="sum-own-needed">—</strong><small>Kolik by bylo potřeba doplnit nebo snížit úvěr, aby seděl orientační poměr zajištění.</small></div>
+              <div class="summary-value"><span>Kolik % ceny pokryje hypotéka</span><strong id="sum-ltv">—</strong></div>
+              <div class="summary-warning calc-hidden" id="manual-loan-warning">Výše úvěru je zadaná ručně. Změna ceny nemovitosti nebo vlastních peněz proto nemusí sama změnit splátku.</div>
+              <div class="rate-scenarios" id="rate-scenarios">
+                <h3>Scénáře vývoje sazby</h3>
+                <p class="scenario-note">Nejde o předpověď trhu. Je to jen orientační citlivost výpočtu na změnu sazby.</p>
+                <div class="scenario-group">
+                  <div class="scenario-group-title">Při současné sazbě</div>
+                  <div class="scenario-row"><div><span id="scenario-base-rate">—</span><strong id="scenario-base-payment">—</strong></div><div class="scenario-diff">základ</div></div>
+                </div>
+                <div class="scenario-group">
+                  <div class="scenario-group-title">Kdyby sazba byla vyšší</div>
+                  <div class="scenario-row"><div><span id="scenario-up1-rate">—</span><strong id="scenario-up1-payment">—</strong></div><div id="scenario-up1-diff" class="scenario-diff up">—</div></div>
+                  <div class="scenario-row"><div><span id="scenario-up2-rate">—</span><strong id="scenario-up2-payment">—</strong></div><div id="scenario-up2-diff" class="scenario-diff up">—</div></div>
+                </div>
+                <div class="scenario-group">
+                  <div class="scenario-group-title">Kdyby sazba byla nižší</div>
+                  <div class="scenario-row"><div><span id="scenario-down05-rate">—</span><strong id="scenario-down05-payment">—</strong></div><div id="scenario-down05-diff" class="scenario-diff down">—</div></div>
+                  <div class="scenario-row"><div><span id="scenario-down1-rate">—</span><strong id="scenario-down1-payment">—</strong></div><div id="scenario-down1-diff" class="scenario-diff down">—</div></div>
+                </div>
+                <div class="scenario-cta" id="rate-scenario-cta">
+                  <div>
+                    <strong>Chcete ověřit, jestli může být sazba nižší?</strong>
+                    <span>Rozdíl v sazbě může výrazně změnit splátku. Ověřím za vás, jestli pro vaši situaci existuje lepší dostupná možnost u bank.</span>
+                  </div>
+                  <a href="#kontakt" class="btn primary">Chci ověřit levnější možnost <span class="arrow">›</span></a>
+                </div>
+                <p id="fixation-note" class="fixation-note calc-hidden">Po skončení fixace se může měsíční splátka změnit podle tehdejší sazby.</p>
+              </div>
+              <div class="precision-box"><div class="precision-head"><span>Úroveň zpřesnění odhadu</span><strong id="precision-score">—</strong></div><div class="progress"><span id="precision-bar"></span></div><p class="helper" id="precision-label">Nejdřív spočítáme základní odhad</p></div>
+              <div class="condition-row"><strong>Zatížení dnes</strong><span id="sum-current-load">—</span></div><div class="condition-row"><strong>Zatížení po transakci</strong><span id="sum-future-load">—</span></div><p class="disclaimer" id="sum-note">Výpočet je orientační. Finální možnosti závisí na bance, odhadu nemovitosti a doložených údajích.</p><button class="btn primary" type="button" data-open-lead>Chci ověřit reálné možnosti u bank</button>
+            </aside>
+
+            <section class="calc-panel mortgage-recommendation" id="mortgage-recommendation">
+              <div class="recommendation-badge" id="mortgage-rec-badge">Orientačně</div>
+              <h2>Orientační doporučení</h2>
+              <p id="mortgage-rec-text">Vyplňte údaje a spusťte výpočet. Tady uvidíte srozumitelný závěr, co z výsledku plyne.</p>
+              <div class="recommendation-columns">
+                <div>
+                  <h3>Co výsledek říká</h3>
+                  <ul id="mortgage-rec-why"></ul>
+                </div>
+                <div>
+                  <h3>Na co si dát pozor</h3>
+                  <ul id="mortgage-rec-watch"></ul>
+                </div>
+                <div>
+                  <h3>Co udělat dál</h3>
+                  <ul id="mortgage-rec-next"></ul>
+                </div>
+              </div>
+            </section>
+<div id="kontakt" class="form-anchor"></div>
+<section id="lead-block" class="calc-panel lead-block active mortgage-final-cta" data-anchor="kontakt">
+                <h2>Pošlete mi výsledek. Ověřím, co reálně projde u bank</h2>
+                <p>Výsledek kalkulačky se přiloží automaticky. Zkontroluji čísla, slabá místa a možnosti u bank — včetně individuálních variant, pokud dávají smysl.</p>
+                <div class="data-package-note">
+                  <span class="tick">✓</span>
+                  <div>
+                    <strong>Údaje z hypoteční kalkulačky se přiloží automaticky.</strong>
+                    <span>Nemusíte nic opisovat ručně. Díky tomu půjde výsledek rychleji ověřit.</span>
+                  </div>
+                </div>
+                <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                  <input type="hidden" name="access_key" value="b73262e9-1e6e-4062-b94e-d2e6530dd519"><input type="hidden" name="subject" value="Žádost o kontrolu hypoteční kalkulačky"><input type="hidden" name="from_name" value="davidzara.cz"><input type="hidden" name="redirect" value="https://davidzara.cz/dekuji.html"><input type="hidden" name="vysledek_kalkulacky" id="lead-result">
+                  <textarea name="kompletni_balicek_dat_z_hypotecni_kalkulacky" id="mortgage-full-data" hidden></textarea>
+                  <textarea name="hypotecni_kalkulacka_json" id="mortgage-json-data" hidden></textarea><input type="checkbox" name="botcheck" style="display:none">
+                  <div class="form-row"><label>Jméno a příjmení<input name="jmeno" type="text" required placeholder="Jan Novák" autocomplete="name"></label><label>Telefon<input name="telefon" type="tel" required placeholder="+420 777 000 000" autocomplete="tel"></label></div><label>E-mail<input name="email" type="email" placeholder="jan@email.cz" autocomplete="email"></label><label>Zpráva<textarea name="zprava" placeholder="Napište stručně, co chcete řešit. Například: chci ověřit, jestli je hypotéka bezpečná pro můj rozpočet."></textarea></label><details class="calculation-preview">
+                  <summary>Zobrazit balíček dat, který se odešle</summary>
+                  <pre id="mortgage-data-preview">Zatím bez výpočtu.</pre>
+                </details>
+                <label class="consent"><input type="checkbox" name="souhlas" required><span>Souhlasím se zpracováním osobních údajů za účelem kontaktování. Více v <a href="zasady-zpracovani-osobnich-udaju.html">zásadách ochrany osobních údajů</a>.</span></label><button class="btn primary" type="submit">Chci ověřit reálné možnosti u bank <span class="arrow">›</span></button><div class="form-note">Nejde o závazek. Nejdřív ověříme, jestli řešení dává smysl a která cesta má největší šanci projít bankou.</div>
+                </form>
+              </section>
+            
+          </div>
+        </div>
+
+        <div id="reserve-calculator" class="calculator-shell">
+          <div class="simple-calc-grid"><section class="calc-panel"><h2>Kalkulačka finanční rezervy</h2><p>Pomůže určit orientační bezpečnostní polštář podle měsíčních výdajů.</p><div class="calc-fields"><div class="calc-field"><label for="r-expenses">Měsíční výdaje domácnosti</label><input id="r-expenses" type="number" value="35000"></div><div class="calc-field"><label for="r-income">Čistý měsíční příjem</label><input id="r-income" type="number" value="55000"></div><div class="calc-field"><label for="r-current">Kolik už máte bokem?</label><input id="r-current" type="number" value="100000"></div><div class="calc-field"><label for="r-months">Rezerva na kolik měsíců?</label><input id="r-months" type="number" value="6"></div></div><div class="calc-actions"><button id="r-calculate" class="btn primary" type="button">Spočítat rezervu</button></div></section><aside class="calc-summary"><div class="calc-summary-title">Orientační výsledek</div><div class="summary-value primary"><span>Cílová rezerva</span><strong id="r-target">—</strong></div><div class="summary-value"><span>Kolik ještě chybí</span><strong id="r-gap">—</strong></div><p class="disclaimer" id="r-note">Výsledek je orientační a nenahrazuje individuální finanční plán.</p></aside></div>
+        </div>
+        <div id="income-calculator" class="calculator-shell">
+          <div class="simple-calc-grid"><section class="calc-panel"><h2>Kalkulačka výpadku příjmu</h2><p>Ukáže, jak dlouho domácnost vydrží z rezervy, pokud se sníží nebo zastaví příjem.</p><div class="calc-fields"><div class="calc-field"><label for="i-expenses">Měsíční výdaje domácnosti</label><input id="i-expenses" type="number" value="35000"></div><div class="calc-field"><label for="i-savings">Dostupná rezerva</label><input id="i-savings" type="number" value="150000"></div><div class="calc-field"><label for="i-benefit">Příjem / dávka při výpadku</label><input id="i-benefit" type="number" value="0"><span class="helper">Např. nemocenská, renta nebo jiný příjem.</span></div></div><div class="calc-actions"><button id="i-calculate" class="btn primary" type="button">Spočítat výpadek</button></div></section><aside class="calc-summary"><div class="calc-summary-title">Orientační výsledek</div><div class="summary-value primary"><span>Měsíční rozdíl</span><strong id="i-gap">—</strong></div><div class="summary-value"><span>Rezerva vydrží přibližně</span><strong id="i-months">—</strong></div><p class="disclaimer" id="i-note">Výsledek je orientační. U delší pracovní neschopnosti nebo invalidity má smysl řešit ochranu příjmu individuálně.</p></aside></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <h2>Hypotéka není jen splátka.<br>Je to dlouhodobé rozhodnutí.</h2>
+      <p>Kalkulačka ukáže první čísla. Společně můžeme ověřit, jestli dávají smysl i pro váš rozpočet, rezervu a plán do dalších let.</p>
+    </footer>
+    <div class="mobile-result-bar calc-hidden" id="mobile-result-bar"><button class="mobile-result-main" type="button" data-open-summary><div class="mobile-result-item"><span>Splátka</span><strong id="mobile-payment">—</strong></div><div class="mobile-result-item mobile-own"><span>Chybí vlastní</span><strong id="mobile-own-needed">—</strong></div><span class="mobile-result-status" id="mobile-status">Orientační výsledek</span></button><button class="mobile-result-cta" type="button" data-open-lead>Poradce</button></div>
+  </main>
+  
+<script src="hypotecni-kalkulacka.js"></script>
+
+<script src="site-nav.js"></script>
+</body>
+</html>
