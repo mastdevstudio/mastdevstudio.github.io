@@ -79,8 +79,8 @@ h2 { font-size: clamp(1.6rem,2.6vw,2.2rem); margin-bottom: 0; }
 .app-screen-trigger { display: grid; place-items: center; padding: 0; border: 0; background: transparent; cursor: zoom-in; min-width: 0; border-radius: 6px; }
 .app-screen { display: block; width: 100%; height: 210px; object-fit: contain; border-radius: 6px; }
 .app .actions { border-top: 1px solid var(--line); padding-top: 18px; gap: 12px; }
-.appstore-link { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 44px; padding: 10px 14px; border-radius: 9px; background: var(--blue); color: white; text-decoration: none; font-size: .78rem; font-weight: 700; }
-.appstore-link:hover { background: var(--navy); }
+.appstore-badge { display: inline-flex; flex-shrink: 0; line-height: 0; border-radius: 7px; }
+.appstore-badge img { display: block; height: 46px; width: auto; }
 .btn.store-link { padding: 8px 12px; min-height: 44px; color: var(--muted); font-size: .75rem; background: transparent; border-color: transparent; }
 .btn.store-link:hover { background: var(--pale); color: var(--navy); }
 .models { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: 40px; padding: 44px; border-radius: 26px; border: 1px solid var(--line); background: #e7f0fb; overflow: hidden; }
